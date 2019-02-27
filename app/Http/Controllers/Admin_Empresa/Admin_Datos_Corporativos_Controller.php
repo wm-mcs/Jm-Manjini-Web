@@ -48,4 +48,24 @@ class Admin_Datos_Corporativos_Controller extends Controller
 
     return redirect()->back()->with('alert', 'has actualizado la información de manera correcta');
   }
+
+
+  //para editar el curriculumn vitae
+  public function get_cv()
+  {
+    $Empresa = $this->Empresa->getEmpresaDatos();
+
+    return view('admin.cv.users_editar_cv', compact('Empresa'));
+  }
+
+  public function patch_cv(Request $Request)
+  {
+    $Empresa = $this->Empresa->getEmpresaDatos(); 
+
+    $this->Empresa->setAtributoEspecifico($Empresa,'cv_text',$Request->get('cv_text'));
+
+    $this->Empresa->setImagen()
+
+    return redirect()->back()->with('alert','Editado correctamente');
+  }
 }
