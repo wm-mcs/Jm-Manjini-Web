@@ -55,7 +55,7 @@ class Admin_Datos_Corporativos_Controller extends Controller
   {
     $Empresa = $this->Empresa->getEmpresaDatos();
 
-    return view('admin.cv.users_editar_cv', compact('Empresa'));
+    return view('admin.cv.cv_editar', compact('Empresa'));
   }
 
   public function patch_cv(Request $Request)
