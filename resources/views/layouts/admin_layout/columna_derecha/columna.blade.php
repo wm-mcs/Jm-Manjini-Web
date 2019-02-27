@@ -28,6 +28,12 @@
           <li class="admin-columna-li mi-float-right"><i class="fas fa-bars"></i> Categorias</li>
         </a>  
 
+        <a href="{{route('get_cv')}}">
+          <li class="admin-columna-li mi-float-right"><i class="fas fa-user-tie"></i> CV</li>
+        </a>  
+
+        
+
         
         
     </div>
