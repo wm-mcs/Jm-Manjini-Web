@@ -16,7 +16,7 @@
 
 
  {{-- formulario --}}
-  {!! Form::model($Empresa,   ['route' => ['set_admin_users_editar',$user->id],
+  {!! Form::model($Empresa,   ['route' => 'patch_cv',
                             'method'=> 'patch',
                             'files' =>  true,
                             'id'    => 'form-admin-empresa-datos'
@@ -25,7 +25,7 @@
 
       {{-- datos corporativos --}}
       <div class="contenedor-grupo-datos">
-        <div class="contenedor-grupo-datos-titulo"><span class="icon-person"></span> Identidad</div>
+        <div class="contenedor-grupo-datos-titulo"><span class="icon-person"></span> Cv</div>
         <div class="contenedor-formulario-label-fiel">                       
           @include('admin.cv.formularios_partes.datos_user')
         </div>
