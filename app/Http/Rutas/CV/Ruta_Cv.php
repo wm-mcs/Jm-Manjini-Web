@@ -8,7 +8,7 @@ Route::get('get_cv',
 ]); 
 
 
-Route::path('patch_cv',
+Route::pathc('patch_cv',
 [
   'uses'  => 'Admin_Empresa\Admin_Datos_Corporativos_Controller@patch_cv',
   'as'    => 'patch_cv'
