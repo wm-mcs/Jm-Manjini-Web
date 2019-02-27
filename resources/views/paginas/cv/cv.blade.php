@@ -64,9 +64,9 @@
   
 
 
-   <div class="contenedor-listado-noticias" id="contenido-noticia">  
+   <div class="contenedor-listado-noticias" id="contenido-noticia"> 
     
-       {{html_entity_decode($Empresa->contenido_render)}}
+       {{html_entity_decode($Empresa->contenido_cv_render)}}
 
    </div>
 
