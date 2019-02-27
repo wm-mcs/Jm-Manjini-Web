@@ -20,7 +20,13 @@
 
                   <p class="color-text-gris espacio-letras small helper_cursor_pointer" data-toggle="modal" data-target="#modal-mantenimiento">  
                     Política de mantenimiento
-                 </p>            
+                 </p>   
+
+                 @if($Empresa->cv != 'no')
+                  <a  href="{{route('get_pagina_cv')}}"> 
+                   Curriculum vitae
+                  </a>
+                 @endif          
               </div>
 
 

@@ -1,8 +1,8 @@
 <?php 
 
 //Ruta de Home Panel Admin
-Route::get('get_admin_home',
+Route::get('curriculum-vitae',
 [
-  'uses'  => 'Admin_Empresa\AdminController@get_admin_home',
-  'as'    => 'get_admin_home'
+  'uses'  => 'Publicas\Paginas_Controller@get_pagina_cv',
+  'as'    => 'get_pagina_cv'
 ]);

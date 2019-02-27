@@ -149,4 +149,13 @@ class Paginas_Controller extends Controller
     }
 
 
+
+    public function get_pagina_cv()
+    {
+        $Empresa  = $this->EmpresaRepo->getEmpresaDatos();
+        return view('paginas.cv.cv', compact('Empresa'));
+    }
+
+
+
 }

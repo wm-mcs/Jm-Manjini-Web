@@ -153,6 +153,51 @@ class Empresa extends Model
 
 
 
+
+    public function getContenidoCvRenderAttribute()
+    {
+        $cadena = $this->cv_text;
+
+        //parrafos
+        $cadena = str_replace('(P)' ,'<p class="cv-individual-p">', $cadena);
+        $cadena = str_replace('(/P)' ,'</p>', $cadena);
+
+        //titulos
+        $cadena = str_replace('(T)' ,'<h2 class="cv-individual-section-titulo">', $cadena);
+        $cadena = str_replace('(/T)' ,'</h2>', $cadena);
+
+        //links
+        $cadena = str_replace('(A)' ,'<a href="', $cadena);
+        $cadena = str_replace('(/A)' ,'">', $cadena);
+        $cadena = str_replace('(AT)' ,'', $cadena);
+        $cadena = str_replace('(/AT)' ,'</a>', $cadena);
+
+        //img
+        $cadena = str_replace('(IMG)' ,'<img class="cv-img-secundarias" src="', $cadena);
+        $cadena = str_replace('(/IMG)' ,'">', $cadena);
+
+        $cadena = str_replace('(IMGT)' ,'<span class="cv-img-texto" >', $cadena);
+        $cadena = str_replace('(/IMGT)' ,'</span>', $cadena);
+
+        
+
+        return htmlentities($cadena, ENT_QUOTES | ENT_IGNORE, "UTF-8"); 
+    }
+
+
+
+    public function getUrlImgCvPortadaAttribute()
+    {
+        return url().'/imagenes/Cv/'.str_replace(' ' ,'-', $this->name ).'-cv-1.jpg';
+    }
+
+    public function getCvAttribute()
+    {        
+        return $this->helper_verificar_nulidad($this->cv_text);
+    }
+
+
+
     
 
     
