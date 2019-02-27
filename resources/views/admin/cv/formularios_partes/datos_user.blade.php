@@ -31,10 +31,10 @@
 </div>
 
 <div class="flex-row-column get_width_100" >
-  <img class="admin-img-section-img" src="{{$Entidad->img_cv_patch}}1.jpg">
-  <img class="admin-img-section-img" src="{{$Entidad->img_cv_patch}}2.jpg">
-  <img class="admin-img-section-img" src="{{$Entidad->img_cv_patch}}3.jpg">
-  <img class="admin-img-section-img" src="{{$Entidad->img_cv_patch}}4.jpg">
+  <img class="admin-img-section-img" src="{{$Empresa->img_cv_patch}}1.jpg">
+  <img class="admin-img-section-img" src="{{$Empresa->img_cv_patch}}2.jpg">
+  <img class="admin-img-section-img" src="{{$Empresa->img_cv_patch}}3.jpg">
+  <img class="admin-img-section-img" src="{{$Empresa->img_cv_patch}}4.jpg">
 </div>
 
 
