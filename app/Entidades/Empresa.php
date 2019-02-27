@@ -54,6 +54,12 @@ class Empresa extends Model
         return url().'/imagenes/'.$this->logo_vertical;
     }
 
+    public function getImgCvPatchAttribute()
+    {
+        
+        return url().'/imagenes/Cv/'.str_replace(' ' ,'-', $this->name ).'-cv-';
+    }
+
     //datos
     public function getTelefonoEmpresaAttribute()
     {        

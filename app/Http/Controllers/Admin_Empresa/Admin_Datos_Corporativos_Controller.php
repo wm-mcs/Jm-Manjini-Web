@@ -64,7 +64,10 @@ class Admin_Datos_Corporativos_Controller extends Controller
 
     $this->Empresa->setAtributoEspecifico($Empresa,'cv_text',$Request->get('cv_text'));
 
-    $this->Empresa->setImagen()
+    $this->Empresa->setImagen( null, $Request,'img1','Cv/',str_replace(' ' ,'-', $Empresa->name ).'-cv-1','.jpg');
+    $this->Empresa->setImagen( null, $Request,'img2','Cv/',str_replace(' ' ,'-', $Empresa->name ).'-cv-2','.jpg');
+    $this->Empresa->setImagen( null, $Request,'img3','Cv/',str_replace(' ' ,'-', $Empresa->name ).'-cv-3','.jpg');
+    $this->Empresa->setImagen( null, $Request,'img4','Cv/',str_replace(' ' ,'-', $Empresa->name ).'-cv-4','.jpg');    
 
     return redirect()->back()->with('alert','Editado correctamente');
   }

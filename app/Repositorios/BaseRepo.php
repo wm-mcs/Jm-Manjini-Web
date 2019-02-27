@@ -207,11 +207,16 @@ abstract class BaseRepo
                                                                        })->save('imagenes/'.$carpetaDelArchivo.$nombreDelArchivo.'-chica' .$ExtensionDelArchivo, 70);    
 
          //guardo_el_img
-         try
+         if($Entidad != null)
          {
-          $this->setAtributoEspecifico($Entidad,'img',$Entidad->name_slug);
+            try
+           {
+            $this->setAtributoEspecifico($Entidad,'img',$Entidad->name);
+           }
+           catch (Exception $e){}
+           
          }
-         catch (Exception $e){}
+         
          
          
          
