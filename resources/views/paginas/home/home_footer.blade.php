@@ -13,17 +13,10 @@
 
              {{-- parte de politicas --}}  
              <div class="text-center contenedor-columna-footer  Helper-OrdenarHijos-Row">
-              <div class="get_width_100 flex-row-column">
-                 <p class="color-text-gris espacio-letras small helper_cursor_pointer" data-toggle="modal" data-target="#modal-garantia">  
-                    Política de devolución
-                 </p>   
-
-                  <p class="color-text-gris espacio-letras small helper_cursor_pointer" data-toggle="modal" data-target="#modal-mantenimiento">  
-                    Política de mantenimiento
-                 </p>   
+              <div class="get_width_100 flex-row-column">                
 
                  @if($Empresa->cv != 'no')
-                  <a  href="{{route('get_pagina_cv')}}"> 
+                  <a class=" espacio-letras" href="{{route('get_pagina_cv')}}"> 
                    Curriculum vitae
                   </a>
                  @endif          
@@ -117,5 +110,5 @@
 </section>
 
 
-@include('paginas.home.home_modal_contacto')
-@include('paginas.politicas.mantenimiento_garantia_modals')
+{{-- @include('paginas.home.home_modal_contacto')
+@include('paginas.politicas.mantenimiento_garantia_modals') --}}
