@@ -40,9 +40,9 @@ class Admin_Datos_Corporativos_Controller extends Controller
       $this->Empresa->setEntidadDato($Empresa,$Request,$Propiedades);
        
 
-      $this->Empresa->setImagen($Empresa,$Request,'logo_cuadrado','Empresa/','logo_cuadrado','.png');
-      $this->Empresa->setImagen($Empresa,$Request,'logo_horizontal','Empresa/','logo_horizontal','.png');
-      $this->Empresa->setImagen($Empresa,$Request,'logo_vertical','Empresa/','logo_vertical','.png');
+      $this->Empresa->setImagen(null,$Request,'logo_cuadrado','Empresa/','logo_cuadrado','.png');
+      $this->Empresa->setImagen(null,$Request,'logo_horizontal','Empresa/','logo_horizontal','.png');
+      $this->Empresa->setImagen(null,$Request,'logo_vertical','Empresa/','logo_vertical','.png');
 
       $Empresa->save();  
 
