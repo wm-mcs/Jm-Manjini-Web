@@ -32,9 +32,9 @@ class EmpresaRepo extends BaseRepo
     $this->setEntidadDato($Empresa,$request,$Propiedades);
        
 
-      $this->setImagen($Empresa,$request,'logo_cuadrado','Empresa/','logo_cuadrado','.png');
-      $this->setImagen($Empresa,$request,'logo_horizontal','Empresa/','logo_horizontal','.png');
-      $this->setImagen($Empresa,$request,'logo_vertical','Empresa/','logo_vertical','.png');
+      $this->setImagen(null,$request,'logo_cuadrado','Empresa/','logo_cuadrado','.png');
+      $this->setImagen(null,$request,'logo_horizontal','Empresa/','logo_horizontal','.png');
+      $this->setImagen(null,$request,'logo_vertical','Empresa/','logo_vertical','.png');
 
     $Empresa->save();   
   }
