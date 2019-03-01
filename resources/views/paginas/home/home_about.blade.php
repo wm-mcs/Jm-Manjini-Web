@@ -20,8 +20,8 @@
             Conferenciante en congresos internacionales en México, Argentina y Chile de temáticas de Violencia basada en genero y las consecuencias Psicológicas que esto puede traer.
             </p>
 
-             <p class="text-white mb-4">Psicologo comprometido con su trabajo, en constante formación con el fin de formar y ser formado en una dialéctica de conocimientos.
-            </p>
+             <p class="text-white mb-4">Psicologo comprometido con su trabajo, en constante formación con el fin de formar y ser formado en una dialéctica de conocimientos. <a href="https://www.comunamujer.com/hablemos-de-abuso-sexual-en-la-infancia/ct_2852/#">Ultima Publicacion en La revista Comuna Mujer</a> . 
+            </p> 
             
           </div>
         </div>
