@@ -21,7 +21,7 @@
       <img src="{{url()}}/imagenes/Empresa/Portada/principal3.jpg" class="img-slider-size">
     
       @include('paginas.home.home_libro')  
-      <img src="{{url()}}/imagenes/Empresa/Portada/principal4.jpg" class="img-slider-size">
+      <img src="{{url()}}/imagenes/Empresa/Portada/principal4.png" class="img-slider-size">
       {{-- @include('paginas.home.home_precios')
       @include('paginas.home.home_garantia') --}}
 @stop      
