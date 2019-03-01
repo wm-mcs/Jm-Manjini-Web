@@ -8,7 +8,12 @@
             </li> 
              <li class="nav-item">
               <a class="nav-link js-scroll-trigger " href="#blog">BLOG</a>
-            </li>                     
+            </li>    
+            @if($Empresa->cv != 'no')                 
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{route('get_pagina_cv')}}">CV</a>
+                  </li> 
+            @endif                   
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">CONTACTO</a>
             </li>
