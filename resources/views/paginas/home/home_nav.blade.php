@@ -1,14 +1,11 @@
 
+            
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger " href="#about">NOSOTROS</a>
+              <a class="nav-link js-scroll-trigger " href="#sobre_mi">SOBRE MI</a>
             </li> 
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger " href="#precios">PRECIOS</a>
-            </li>            
-           
-             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#garantia">GARANTÍA</a>
-            </li>            
+              <a class="nav-link js-scroll-trigger " href="#libro">LIBRO</a>
+            </li>                     
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">CONTACTO</a>
             </li>

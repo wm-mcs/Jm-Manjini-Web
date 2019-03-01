@@ -18,7 +18,7 @@
       @include('paginas.home.home_about') 
       {{-- @include('paginas.home.home_clientes') --}}
     
-      @include('paginas.home.home_pasos_para_concretar')  
+      @include('paginas.home.home_libro')  
       {{-- @include('paginas.home.home_precios')
       @include('paginas.home.home_garantia') --}}
 @stop      
