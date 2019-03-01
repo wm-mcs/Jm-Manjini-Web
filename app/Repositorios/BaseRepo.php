@@ -233,9 +233,9 @@ abstract class BaseRepo
          //guardo_el_img
          if($Entidad != null)
          {
-            try
+           try
            {
-            $this->setAtributoEspecifico($Entidad,'img',$Entidad->name);
+            $this->setAtributoEspecifico($Entidad,'img',$Entidad->name_slug);
            }
            catch (Exception $e){}
            
