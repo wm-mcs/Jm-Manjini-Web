@@ -13,14 +13,14 @@
 
              {{-- parte de politicas --}}  
              <div class="text-center contenedor-columna-footer  Helper-OrdenarHijos-Row">
-              <div class="get_width_100 flex-row-column">                
+             {{--  <div class="get_width_100 flex-row-column">                
 
                  @if($Empresa->cv != 'no')
                   <a class=" espacio-letras" href="{{route('get_pagina_cv')}}"> 
                    Curriculum vitae
                   </a>
                  @endif          
-              </div>
+              </div> --}}
 
 
               <div class="get_width_100 flex-row-center flex-justifice-space-around flex-wrap">
