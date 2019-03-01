@@ -130,6 +130,8 @@ class Noticia extends Model
         //quito caracteres - 
         $cadena = str_replace('-' ,' ', $cadena);
         $cadena = str_replace(' ' ,'-', $cadena);
+        $cadena = str_replace('?' ,'', $cadena);
+        $cadena = str_replace('¿' ,'', $cadena);
 
         return $cadena;
     }
