@@ -7,7 +7,9 @@
             <h4 class="text-muted mb-4">Ultimos aportes</h4>
           </div>
         </div>
-         <div class="contenedor-listado-noticias">
+
+      </div>
+      <div class="contenedor-listado-noticias">
 
           @foreach($Noticias as $Noticia)
           
@@ -16,7 +18,6 @@
           @endforeach
 
         </div>
-      </div>
        
       
 </section>
