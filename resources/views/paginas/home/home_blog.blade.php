@@ -9,7 +9,8 @@
         </div>
 
       </div>
-        <div class="contenedor-listado-noticias">
+      <div class="get_width_100 flex-row-column">
+         <div class="contenedor-listado-noticias">
 
           @foreach($Noticias as $Noticia)
           
@@ -18,6 +19,8 @@
           @endforeach
 
         </div>
+      </div>
+       
        
       
 </section>
