@@ -146,6 +146,30 @@ abstract class BaseRepo
   
     }
 
+
+    public function getEntidadesActivasYOrdenadas($Cantidad,$Orden)
+    {
+      $cantidad_de_entidades =  $this->entidad->active()->get()->count();
+
+      if($cantidad_de_entidades >= $Cantidad)
+      {
+        $entidades = $this->entidad               
+                          ->active()
+                          ->orderBy('id',$Orden)
+                          ->take($Cantidad)
+                          ->get();
+      }
+      else
+      {
+        $entidades = $this->entidad              
+                          ->active()
+                          ->orderBy('id',$Orden)
+                          ->get();
+      }  
+
+    return $entidades;
+    }
+
      
 
     /**
