@@ -9,7 +9,7 @@
         </div>
 
       </div>
-      <div class="contenedor-listado-noticias">
+        <div class="contenedor-listado-noticias">
 
           @foreach($Noticias as $Noticia)
           
