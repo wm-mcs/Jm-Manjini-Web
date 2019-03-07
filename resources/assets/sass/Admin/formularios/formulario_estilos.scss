@@ -46,6 +46,22 @@
              background-color:$color-grey0;
              margin-top: 4px;
            }
+
+           .aclaracion-de-etiquetas{
+            width: 100%;
+            margin:3px 0;
+            padding: 10px;
+            background-color: $color-grey1;
+            @include flexbox; 
+            @include flex-direction(column);
+            @include align-items(flex-start);  
+            border-radius:4px;    
+            }
+
+            .aclaracion-de-etiquetas-linea{
+              font-size: 10px;
+              margin-top: 2px;
+            }
            
            
 
