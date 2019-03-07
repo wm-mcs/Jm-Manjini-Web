@@ -51,7 +51,7 @@
             width: 100%;
             margin:3px 0;
             padding: 10px;
-            background-color: $color-grey1;
+            background-color: $color-grey0;
             @include flexbox; 
             @include flex-direction(column);
             @include align-items(flex-start);  
@@ -59,8 +59,10 @@
             }
 
             .aclaracion-de-etiquetas-linea{
-              font-size: 10px;
+              font-size: 12px;
               margin-top: 2px;
+              padding:2px;
+              
             }
            
            
