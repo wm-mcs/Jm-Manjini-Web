@@ -52,6 +52,14 @@
     <a class="iconos-share-formato" href="http://facebook.com/sharer.php?u={{$Noticia->route}}">
             <i class="fab fa-facebook"></i>
     </a>
+
+    <a class="iconos-share-formato" href="https://www.linkedin.com/shareArticle?url={{$Noticia->route}}">
+            <i class="fab linkedin-facebook"></i>
+    </a>
+
+    <a class="iconos-share-formato" href="https://twitter.com/?status=Me gusta esta página {{$Noticia->route}}">
+            <i class="fab fa-twitter-square"></i>
+    </a>
    
  </div> 
 

@@ -35,7 +35,7 @@
 
    <div id="admin-col-admin">
         <a href="{{route('get_datos_corporativos')}}">
-            <li class="admin-columna-li mi-float-right"><i class="fas fa-building"></i> La Empresa</li>
+            <li class="admin-columna-li mi-float-right"><i class="fas fa-building"></i> Mis datos</li>
         </a>   
 
         <a href="{{route('get_cv')}}">
