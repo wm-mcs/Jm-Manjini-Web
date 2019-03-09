@@ -40,7 +40,8 @@
                   @yield('content')  
              </div>           
              @include('paginas.home.home_footer')
-        </span>
+             @yield('iconos-compartir')
+           </span>
 
 
     <!-- Scripts -->

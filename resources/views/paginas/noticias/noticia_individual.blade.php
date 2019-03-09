@@ -28,6 +28,13 @@
 @stop
 
 
+@section('iconos-compartir')
+
+ @include('paginas.comunes.botonera_compartir')
+
+@endsection
+
+
 
 @section('content')
 
