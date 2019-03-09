@@ -38,13 +38,13 @@
      <i class="fas fa-share-alt"></i>
 
     {{-- //whatzap icono --}}
-    <a class="no-mostrar-barra-de-carga icono-compartir-whatzap" href="whatsapp://send?text={{$Noticia->route}}" data-action="share/whatsapp/share">
-            <span class="icon-share"></span>
+    <a class="" href="whatsapp://send?text={{$Noticia->route}}" data-action="share/whatsapp/share">
+            <i class="fab fa-whatsapp-square"></i>
     </a>
 
 
-    <a class="no-mostrar-barra-de-carga icono-compartir-whatzap" href="http://facebook.com/sharer.php?u={{$Noticia->route}}">
-            <span class="icon-share"></span>
+    <a class="" href="http://facebook.com/sharer.php?u={{$Noticia->route}}">
+            <i class="fab fa-facebook"></i>
     </a>
    
  </div> 
