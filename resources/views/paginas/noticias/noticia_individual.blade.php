@@ -33,17 +33,18 @@
  <div v-show="scrolled" on-scroll="handleScroll" class="flex-row-column get_width_100 contenedor-iconos-share">
   
 
- <div class="flex-row-center">
+ <div class="flex-row-center sub-contenedor-iconos-share">
 
-     <i class="fas fa-share-alt"></i>
+    <div class="iconos-share-titulo"><i class="fas fa-share-alt"></i> Compartir</div>
+    
 
     {{-- //whatzap icono --}}
-    <a class="" href="whatsapp://send?text={{$Noticia->route}}" data-action="share/whatsapp/share">
+    <a class="iconos-share-formato" href="whatsapp://send?text={{$Noticia->route}}" data-action="share/whatsapp/share">
             <i class="fab fa-whatsapp-square"></i>
     </a>
 
 
-    <a class="" href="http://facebook.com/sharer.php?u={{$Noticia->route}}">
+    <a class="iconos-share-formato" href="http://facebook.com/sharer.php?u={{$Noticia->route}}">
             <i class="fab fa-facebook"></i>
     </a>
    

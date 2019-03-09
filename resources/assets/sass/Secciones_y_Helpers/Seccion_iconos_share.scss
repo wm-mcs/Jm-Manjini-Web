@@ -2,4 +2,31 @@
   position: fixed;
   bottom:0;
   left: 0;
+  padding:10px;  
+}
+
+
+  .sub-contenedor-iconos-share{
+    background-color: white;
+    opacity: 0.8;
+    padding:8px;
+  }
+
+.iconos-share-titulo{
+  font-size: 14px;
+  color:$color-gris-text;
+  margin-right: 10px;
+}
+.iconos-share-formato{
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 30px;
+  color:$color-gris-text;
+  margin-right: 5px;
+  background-color:$color-gris-background;
+}
+
+.iconos-share-formato:hover{
+  background-color: $color-3;
+  color:white;
 }
