@@ -30,7 +30,7 @@
 
 @section('iconos-compartir')
 
- <div class="flex-row-column get_width_100 contenedor-iconos-share">
+ <div v-show="scrolled" class="flex-row-column get_width_100 contenedor-iconos-share">
   
 
  <div class="flex-row-center">

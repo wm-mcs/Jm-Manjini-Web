@@ -14,7 +14,9 @@
       modal_mensaje:'',
       mensajes_enviados:['uno'],
       tipo_de_mensaje:'',
-      para_quien_va_a_ser:''
+      para_quien_va_a_ser:'',
+      scrolled:false,
+      windowWidth: window.innerWidth,
     },
     methods:{
     enviar_contacto: function(){
@@ -143,8 +145,45 @@
       this.modal_mensaje       = ''; 
       this.modal_titulo        = '';
 
-    }
+    },
+
+    handleScroll: function() {
+        if(this.scrolled == false)
+        {
+          this.scrolled = window.scrollY > 0;
+          //muestra le modal segun la cooki de descuento
+
+          //le agrego la funcion de boostrap
+          if(Cookies.get('Mostrar-modal-descuento') == undefined)
+          {
+              Cookies.set('Mostrar-modal-descuento', '2', { expires: 2 });
+
+              $('#descuento-modal').modal('show');
+          }
+        }
+        
+      }
 
     },
+
+   watch: {
+    windowHeight(newHeight, oldHeight) {
+     /*this.txt = `it changed to ${newHeight} from ${oldHeight}`;*/
+    }
+    },  
+
+      mounted(){
+      this.$nextTick(() => {
+        window.addEventListener('resize', () => {
+          this.windowWidth = window.innerWidth
+        });
+      })
+    },  
+      created () {
+        window.addEventListener('scroll', this.handleScroll);
+      },
+      destroyed () {
+        window.removeEventListener('scroll', this.handleScroll);
+      }
 
    });
