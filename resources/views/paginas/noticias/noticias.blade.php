@@ -11,16 +11,16 @@
 
 
 @section('title')
-      | {{$Empresa->name}}
+   Blog  | {{$Empresa->name}}
 @stop
 
 
 @section('MetaContent')
-
+    Artículos de psicología, violencia de género y muchos más.  Desarrollados por | {{$Empresa->name}}
 @stop
 
 @section('MetaRobot')
-
+ index,follow
 @stop
 
 @section('palabras-claves')
