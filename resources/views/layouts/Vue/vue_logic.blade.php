@@ -2,16 +2,7 @@
   
 
   
-  Vue.directive('on-scroll', {
-  inserted: function (el, binding) {
-    let f = function (evt) {
-      if (binding.value(evt, el)) {
-        window.removeEventListener('scroll', f)
-      }
-    }
-    window.addEventListener('scroll', f)
-  }
-});
+
 
 
    var app = new Vue({
@@ -28,7 +19,8 @@
       mensajes_enviados:['uno'],
       tipo_de_mensaje:'',
       para_quien_va_a_ser:'',
-      scrolled:false
+      scrolled:false,
+      windowWidth: window.innerWidth,
     },
     methods:{
     enviar_contacto: function(){
@@ -158,16 +150,48 @@
       this.modal_titulo        = '';
 
     },
+    handleScroll: function() {
+        if(this.scrolled == false)
+        {
+          this.scrolled = window.scrollY > 0;
+          //muestra le modal segun la cooki de descuento
 
-    handleScroll: (event, el) => {
-       if ( window.scrollY >= 300 ) {
-          this.scrolled = true; 
-       } else {
-          this.scrolled = false; 
-       }
-    }
+          //le agrego la funcion de boostrap
+          if(Cookies.get('Mostrar-modal-descuento') == undefined)
+          {
+              Cookies.set('Mostrar-modal-descuento', '2', { expires: 2 });
+
+              $('#descuento-modal').modal('show');
+          }
+        }
+        
+      }
+
+
+   
 
     },
+
+     watch: {
+    windowHeight(newHeight, oldHeight) {
+     /*this.txt = `it changed to ${newHeight} from ${oldHeight}`;*/
+    }
+    },  
+
+      mounted(){
+      this.$nextTick(() => {
+        window.addEventListener('resize', () => {
+          this.windowWidth = window.innerWidth
+        });
+      })
+    },  
+      created () {
+        window.addEventListener('scroll', this.handleScroll);
+      },
+      destroyed () {
+        window.removeEventListener('scroll', this.handleScroll);
+      }
+
 
    });
 
@@ -180,5 +204,5 @@
 
 
 
-  
+
 </script>
