@@ -156,13 +156,11 @@
           this.scrolled = window.scrollY > 0;
           //muestra le modal segun la cooki de descuento
 
-          //le agrego la funcion de boostrap
-          if(Cookies.get('Mostrar-modal-descuento') == undefined)
-          {
-              Cookies.set('Mostrar-modal-descuento', '2', { expires: 2 });
-
-              $('#descuento-modal').modal('show');
-          }
+          
+        }
+        else
+        {
+          this.scrolled = window.scrollY > 0;
         }
         
       }
