@@ -54,7 +54,7 @@
     </a>
 
     <a class="iconos-share-formato" href="https://www.linkedin.com/shareArticle?url={{$Noticia->route}}">
-            <i class="fab linkedin-facebook"></i>
+            <i class="fab fa-linkedin"></i>
     </a>
 
     <a class="iconos-share-formato" href="https://twitter.com/?status=Me gusta esta página {{$Noticia->route}}">
