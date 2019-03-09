@@ -14,11 +14,7 @@
         </a>
         <a href="{{route('get_admin_productos')}}">
           <li class="admin-columna-li mi-float-right"><i class="fab fa-product-hunt"></i> Productos</li>
-        </a>
-
-         <a href="{{route('get_admin_noticias')}}">
-          <li class="admin-columna-li mi-float-right"><i class="fas fa-newspaper"></i> Noticias</li>
-        </a>
+        </a>       
 
         <a href="{{route('get_admin_marcas')}}">
           <li class="admin-columna-li mi-float-right"><i class="fab fa-apple"></i> Marcas</li>
@@ -28,9 +24,7 @@
           <li class="admin-columna-li mi-float-right"><i class="fas fa-bars"></i> Categorias</li>
         </a>  
 
-        <a href="{{route('get_cv')}}">
-          <li class="admin-columna-li mi-float-right"><i class="fas fa-user-tie"></i> CV</li>
-        </a>  
+         
 
         
 
@@ -42,17 +36,20 @@
    <div id="admin-col-admin">
         <a href="{{route('get_datos_corporativos')}}">
             <li class="admin-columna-li mi-float-right"><i class="fas fa-building"></i> La Empresa</li>
-        </a>        
+        </a>   
+
+        <a href="{{route('get_cv')}}">
+          <li class="admin-columna-li mi-float-right"><i class="fas fa-user-tie"></i> CV</li>
+        </a>   
+
+           <a href="{{route('get_admin_noticias')}}">
+          <li class="admin-columna-li mi-float-right"><i class="fas fa-newspaper"></i> Noticias</li>
+        </a>   
         
     </div>
 
 </ul>
 
-    <div id="admin-col-backtoweb">
-        <a href="{{route('get_home')}}">
-            <p><small>Nombre</small></p>
-        </a>
-    </div>
 
     
 </div>
