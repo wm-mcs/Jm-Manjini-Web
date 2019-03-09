@@ -4,7 +4,7 @@
   {{-- <script src="https://unpkg.com/lodash@4.13.1/lodash.min.js"></script> --}}
   
  
-  <script src="{{url()}}{{ elixir('js/vue.js')}} " ></script>  
+  @include('layouts.Vue.vue_logic')
 
 
  
