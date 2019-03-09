@@ -136,6 +136,10 @@
   display:none;
 }
 
+.mostrar-solo-mobil{
+
+}
+
 
 /*simula un link*/
 .simula_link{
@@ -160,3 +164,15 @@
 .helper-relative{
   position:relative;
 }
+
+
+
+
+
+@media (min-width: $BrackPoint-Secundario){
+.mostrar-solo-mobil{
+  display: none;
+}
+
+
+}  

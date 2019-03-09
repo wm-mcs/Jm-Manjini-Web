@@ -3,34 +3,39 @@
 
 
 @section('og-tags')
-{{-- <meta property="og:title" content="Global Target">
-     <meta property="og:description" content="Agencia de modelos, eventos y promociones.">
-     <meta property="og:image" content="https://www.globaltarget.com.uy/thumbnail.jpg">
-     <meta property="og:url" content="https://www.globaltarget.com.uy/"> --}}
+  <meta property="og:url"                content="{{$Noticia->route}}" />
+  <meta property="og:type"               content="website" />
+  <meta property="og:title"              content="{{ $Noticia->name}} | {{$Empresa->name}}" />
+  <meta property="og:description"        content="
+   {{$Noticia->sub_name}} | {{$Empresa->name}}." />
+   <meta property="og:image"               content="{{$Noticia->url_img_portada}}" />
+   <meta property="og:image:secure_url"  content="{{$Noticia->url_img_portada}}" /> 
+
+   <meta property="og:image:alt"         content="{{$Noticia->name}} |  {{$Empresa->name}}" /> 
 @stop
 
 
 @section('title')
-      | {{$Empresa->name}}
+  {{ $Noticia->name}}    | {{$Empresa->name}}
 @stop
 
 
 @section('MetaContent')
-
+ {{$Noticia->sub_name}} |  {{$Empresa->name}} | Psicólogo en Uruguay
 @stop
 
 @section('MetaRobot')
-
+  index,follow
 @stop
 
 @section('palabras-claves')
-
+  
 @stop
 
 
 @section('iconos-compartir')
 
- <div v-show="scrolled" on-scroll="handleScroll" class="flex-row-column get_width_100 contenedor-iconos-share">
+ <div v-show="scrolled" on-scroll="handleScroll" class="get_width_100 contenedor-iconos-share">
   
 
  <div class="flex-row-center sub-contenedor-iconos-share">
@@ -39,7 +44,7 @@
     
 
     {{-- //whatzap icono --}}
-    <a class="iconos-share-formato" href="whatsapp://send?text={{$Noticia->route}}" data-action="share/whatsapp/share">
+    <a class="iconos-share-formato mostrar-solo-mobil" href="whatsapp://send?text={{$Noticia->route}}" data-action="share/whatsapp/share">
             <i class="fab fa-whatsapp-square"></i>
     </a>
 
