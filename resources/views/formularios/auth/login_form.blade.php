@@ -2,7 +2,8 @@
 
   {!! Form::open(             ['route' => 'auth_login_post',
                             'method'   => 'post',
-                            'files'    => true
+                            'files'    => true,
+                            'class'    => 'get_width_100'
                             ])               !!}
 
             
