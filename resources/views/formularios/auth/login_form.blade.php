@@ -13,7 +13,7 @@
               <label for="username" class="cols-sm-2 control-label">Usuario</label>
               <div class="cols-sm-10">
                 <div class="input-group">
-                  <span class="input-group-addon"><i class="glyphicon glyphicon-user" aria-hidden="true"></i></span>
+                  <span class="input-group-addon"><i class="fas fa-user"></i></span>
                   
                   {!! Form::text('email', null ,['class'       => 'form-control',
                                                  'id'          => 'username',
@@ -26,7 +26,7 @@
               <label for="password" class="cols-sm-2 control-label">Contraseña</label>
               <div class="cols-sm-10">
                 <div class="input-group">
-                  <span class="input-group-addon"><i class="glyphicon glyphicon-lock" aria-hidden="true"></i></span>                
+                  <span class="input-group-addon"><i class="fas fa-unlock"></i></span>                
                   {!! Form::password('password', [ 'class'       => 'form-control',
                                                    'id'          => 'password',
                                                    'placeholder' => 'Escribe tu contraseña']) !!}
