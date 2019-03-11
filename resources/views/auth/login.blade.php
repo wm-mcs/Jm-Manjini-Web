@@ -22,14 +22,11 @@
  
 <div class="wraper-content-principal-con-nav">
 
-   <h1 class="mt-2">Inicio de Sesión</h1>
-   <div class="container-fluid section-wrapper">
-     <div class="row">    
-      <div class="col-sm-8 col-sm-push-2 col-md-6 col-md-push-3 col-lg-4 col-lg-push-4 wow fadeInUp">
-       @include('formularios.auth.login_form')
+   <h1 class="mt-4">Inicio de Sesión</h1>
+     
+      <div class="flex-row-column" style="min-width: 300px;">
+        @include('formularios.auth.login_form')
       </div>
-    </div>
-  </div>
   
 </div>
 
