@@ -1,9 +1,9 @@
  <div class="col-lg-10 mx-auto">
-      <h1 class="text-uppercase Slider_cabecera_caption_titulo text-color-black">
+      <h1 class="text-uppercase Slider_cabecera_caption_titulo color-text-white">
         <strong>¿Buscas un Psicólogo?</strong>
       </h1>
       
-</div>
+</div> 
 
 <div class="col-lg-8 mx-auto">
   <h2 class="text-faded mb-5 Slider_cabecera_caption_sub_titulo text-color-primary">Escríbeme ahora</h2>
