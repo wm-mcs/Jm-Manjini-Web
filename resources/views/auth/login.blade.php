@@ -21,13 +21,10 @@
 
  
 <div class="wraper-content-principal-con-nav">
-
-   <h1 class="mt-4">Inicio de Sesión</h1>
-     
+      <h1 class="m-5">Inicio de Sesión</h1>     
       <div class="flex-row-column" style="min-width: 300px;">
         @include('formularios.auth.login_form')
-      </div>
-  
+      </div>  
 </div>
 
 

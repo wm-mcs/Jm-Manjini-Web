@@ -6,9 +6,8 @@ return array(
 
 	'role' => [   ''                              => 'Selecciona uno',
   	            'adminMcos522'                    => 'Admin Supremo',
-  	            'user'                            => 'Usuario',
-  	            'admin_empresa'                   => 'Admin Empresa Cliente',
-                'admin_empresa_cliente'           => 'Moderador Empresa Cliente'
+  	            'user'                            => 'Usuario',  	           
+                'admin_empresa'                   => 'Moderador Empresa Cliente'
                  
               ],
 

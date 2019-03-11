@@ -14,7 +14,7 @@ protected $Gerarquia = [
     'adminMcos522'         => 5 ,
     'admin_empresa'        => 4 ,
     'user_grado_2'         => 3 ,
-    'user_grado_1'         => 2 ,
+    'user_grado_1'         => 2 , 
     'user'                 => 1 
     ];
 
