@@ -14,6 +14,7 @@
               <div class="cols-sm-10">
                 <div class="flex-row-center">
                   <span class="input-group-addon"><i class="fas fa-user"></i></span>
+                  <div class="auth-separador"></div>
                   
                   {!! Form::text('email', null ,['class'       => 'form-control',
                                                  'id'          => 'username',
@@ -26,7 +27,8 @@
               <label for="password" class="cols-sm-2 control-label">Contraseña</label>
               <div class="cols-sm-10">
                 <div class="flex-row-center">
-                  <span class="input-group-addon"><i class="fas fa-unlock"></i></span>                
+                  <span class="input-group-addon"><i class="fas fa-unlock"></i></span>  
+                  <div class="auth-separador"></div>              
                   {!! Form::password('password', [ 'class'       => 'form-control',
                                                    'id'          => 'password',
                                                    'placeholder' => 'Escribe tu contraseña']) !!}
