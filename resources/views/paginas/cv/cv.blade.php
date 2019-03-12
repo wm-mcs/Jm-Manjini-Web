@@ -3,24 +3,24 @@
 
 
 @section('og-tags')
-{{-- <meta property="og:title" content="Global Target">
-     <meta property="og:description" content="Agencia de modelos, eventos y promociones.">
-     <meta property="og:image" content="https://www.globaltarget.com.uy/thumbnail.jpg">
-     <meta property="og:url" content="https://www.globaltarget.com.uy/"> --}}
+<meta property="og:title" content="Curriculum Vitae  | {{$Empresa->name}}">
+     <meta property="og:description" content="Licenciado en Psicología Javier Jesús Mangini Colombo">
+     <meta property="og:image" content="http://javiermanjini.worldmaster.com.uy/imagenes/Cv/Psic%C3%B3logo-Javier-Mangini-cv-4.jpg">
+     <meta property="og:url" content="{{route('get_pagina_cv')}}">
 @stop
 
 
 @section('title')
-      | {{$Empresa->name}}
+   Curriculum Vitae  | {{$Empresa->name}}
 @stop
 
 
 @section('MetaContent')
-
+  Licenciado en Psicología Javier Jesús Mangini Colombo; Psicólogo clínico en Montevideo en consultorio privado, esto no solo implica terapia propiamente dicha sino que también la realización de informes Psicodiagnosticos, Psicopedagogicos, Pedagógicos y Orientación Vocacional.
 @stop
 
 @section('MetaRobot')
-
+ index,follow
 @stop
 
 @section('palabras-claves')
