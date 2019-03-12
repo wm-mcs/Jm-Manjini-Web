@@ -16,7 +16,7 @@
     {{-- css --}}   
     @include('layouts.user_layout.css_fonts')
 
- 
+   
 
   </head>
 
