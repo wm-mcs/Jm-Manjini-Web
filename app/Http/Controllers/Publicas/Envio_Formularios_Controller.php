@@ -32,13 +32,13 @@ class Envio_Formularios_Controller extends Controller
     public function post_contacto_form(Request $Request)
     {
 
-      $Dominio            = '@simbiontecreativo.com';
-      $Nombre_de_empresa  = 'Simbionte';
+      $Dominio            = '@psicologojaviermangini.com.uy';
+      $Nombre_de_empresa  = 'Javier Mangini';
        //valores del request
       $name               = $Request->get('nombre');
       $email              = $Request->get('email');
       $mensaje            = $Request->get('mensaje');
-      $Email_al_que_envia = $Request->get('email_nuestro').$Dominio;
+      $Email_al_que_envia = 'javier'.$Dominio;
       $Titulo_de_email    = $Request->get('titulo_email'); 
 
       
