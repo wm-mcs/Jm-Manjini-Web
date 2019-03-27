@@ -1,3 +1,8 @@
+
+
+@include('paginas.home.home_atiendo_en')
+
+
 <section class="BackgroundGris" id="contact">
       <div class="flex-row-center flex-wrap get_width_100 flex-justifice-space-around">
         <div class="contiene_contacto_img">
