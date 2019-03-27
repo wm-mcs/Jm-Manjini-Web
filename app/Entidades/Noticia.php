@@ -118,8 +118,8 @@ class Noticia extends Model
         $cadena = str_replace('(IMGT)' ,'<span class="post-img-texto" >', $cadena);
         $cadena = str_replace('(/IMGT)' ,'</span>', $cadena);
 
-        $cadena = str_replace('(YOU)' ,'<pre><div class="video-responsive" > <iframe  src="https://www.youtube.com/embed/', $cadena);
-        $cadena = str_replace('(/YOU)' ,'" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div></pre>', $cadena);
+        $cadena = str_replace('(YOU)' ,'<div class="video-responsive" > <iframe  src="https://www.youtube.com/embed/', $cadena);
+        $cadena = str_replace('(/YOU)' ,'" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>', $cadena);
 
         
 
