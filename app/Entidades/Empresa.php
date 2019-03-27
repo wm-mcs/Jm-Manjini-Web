@@ -197,6 +197,12 @@ class Empresa extends Model
     }
 
 
+    public function getNumeroWhatsappYaArregladoAttribute()
+    {
+        return '598'. substr(trim($this->whatsapp_empresa),1);
+    }
+
+
 
     
 
