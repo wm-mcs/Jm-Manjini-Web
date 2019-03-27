@@ -9,6 +9,8 @@
   <div class="aclaracion-de-etiquetas-linea"> Imagen: <span class="text-bold"> (IMG) Aquí url de la imagen  (/IMG) </span> </div>
 
     <div class="aclaracion-de-etiquetas-linea"> Pie de imagen: <span class="text-bold"> (IMGT)  El texto por debajo de la imagen (/IMGT)</span> </div>
+
+    <div class="aclaracion-de-etiquetas-linea"> YOUT UBE: <span class="text-bold"> (YOU)**id del video sin espacios entre las etiquetas YOU**(/YOU)</span> </div>
     
   
 </div>
