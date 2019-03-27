@@ -201,7 +201,7 @@ abstract class BaseRepo
     }
 
 
-    public function setImagen($Entidad,$request,$nombreDelCampoForm,$carpetaDelArchivo,$nombreDelArchivo,$ExtensionDelArchivo,$redimencionar_a = false)
+    public function setImagen($Entidad,$request,$nombreDelCampoForm,$carpetaDelArchivo,$nombreDelArchivo,$ExtensionDelArchivo,$redimencionar_a = null)
     {
       if($request->hasFile($nombreDelCampoForm))
        {
@@ -226,9 +226,9 @@ abstract class BaseRepo
            
 
 
-         $imagen = $imagen_insert->resize(200, null, function ($constraint) {
+        /* $imagen = $imagen_insert->resize(200, null, function ($constraint) {
                                                                            $constraint->aspectRatio();
-                                                                       })->save('imagenes/'.$carpetaDelArchivo.$nombreDelArchivo.'-chica' .$ExtensionDelArchivo, 70);    
+                                                                       })->save('imagenes/'.$carpetaDelArchivo.$nombreDelArchivo.'-chica' .$ExtensionDelArchivo, 70);    */
 
          //guardo_el_img
          if($Entidad != null)
