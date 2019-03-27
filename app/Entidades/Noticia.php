@@ -118,6 +118,9 @@ class Noticia extends Model
         $cadena = str_replace('(IMGT)' ,'<span class="post-img-texto" >', $cadena);
         $cadena = str_replace('(/IMGT)' ,'</span>', $cadena);
 
+        $cadena = str_replace('(YOU)' ,'<span class="post-video" > <iframe width="560" height="315" src="https://www.youtube.com/embed/', $cadena);
+        $cadena = str_replace('(/YOU)' ,'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span>', $cadena);
+
         
 
         return htmlentities($cadena, ENT_QUOTES | ENT_IGNORE, "UTF-8"); 
