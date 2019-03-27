@@ -10,6 +10,10 @@
       <ul class="navbar-nav ml-auto"> 
 
         <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#donde">¿Donde atiendo?</a>
+         </li>
+
+        <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#contact">CONTACTO</a>
         </li>           
         @include('paginas.home.home_nav_auth')

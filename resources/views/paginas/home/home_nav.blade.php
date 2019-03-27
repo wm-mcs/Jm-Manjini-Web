@@ -13,7 +13,13 @@
                   <li class="nav-item">
                     <a class="nav-link" href="{{route('get_pagina_cv')}}">CV</a>
                   </li> 
-            @endif                   
+            @endif     
+
+             <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#donde">¿Donde atiendo?</a>
+             </li>
+           
+
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">CONTACTO</a>
             </li>
