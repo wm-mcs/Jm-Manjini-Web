@@ -49,7 +49,7 @@
         </div>
 
 
-        <a href="https://api.whatsapp.com/send?phone={{$Empresa->numero_whatsapp_ya_arreglado}}&text=Hola!">
+        <a class="mt-5" href="https://api.whatsapp.com/send?phone={{$Empresa->numero_whatsapp_ya_arreglado}}&text=Hola!">
           <div class="boton-simple">
            Agendarme <i class="fab fa-whatsapp"></i>
           </div>
