@@ -93,7 +93,7 @@
         <div class="get_width_100 flex-row-center" style="min-height: 100vh;">
           <div class="get_width_100">
               <div class="col-lg-10 mx-auto">
-                <h1 class="text-uppercase Slider_cabecera_caption_titulo text-color-black">
+                <h1 class="text-uppercase Slider_cabecera_caption_titulo text-color-white">
                   <strong>{{$Noticia->name}}</strong>
                 </h1>
                </div>  
