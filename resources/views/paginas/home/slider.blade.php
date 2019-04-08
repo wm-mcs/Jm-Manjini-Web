@@ -8,7 +8,7 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="img-slider-size Slider_cabecer_img" src="{{url()}}/imagenes/Empresa/Portada/principal.jpg"> 
+      <img class="img-slider-size Slider_cabecer_img" data-src="{{url()}}/imagenes/Empresa/Portada/principal.jpg"> 
      
     </div>
    
