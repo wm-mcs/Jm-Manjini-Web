@@ -7,7 +7,7 @@
             <p class="text-white mb-4"> Mi trabajo e investigación de años está plasmado en este libro. Lo dejo libre para descargar, y este es mi pequeño aporte a la sociedad ;) 
             </p>
 
-             <img src="{{url()}}/imagenes/Empresa/Libro/tapa-libro.jpg" style="width:300px; height: auto; margin:20px 0;">
+             <img data-src="{{url()}}/imagenes/Empresa/Libro/tapa-libro.jpg" style="width:300px; height: auto; margin:20px 0;">
 
              <a class="btn btn-primary btn-xl  Slider_cabecera_boton_contacto" href="{{route('get_pagina_noticias_listado')}}">Descargar
              </a>
