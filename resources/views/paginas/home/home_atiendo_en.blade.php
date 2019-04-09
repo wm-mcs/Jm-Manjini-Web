@@ -1,4 +1,4 @@
-<section id="donde">
+<section id="donde"  class="helper-border-top">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">

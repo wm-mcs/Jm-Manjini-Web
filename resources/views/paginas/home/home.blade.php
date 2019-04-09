@@ -1,6 +1,6 @@
 @extends('layouts.creative.layout_creative')
 
-@section('titulo') {{$Empresa->name}} @stop
+@section('titulo') {{$Empresa->name}} | Psicólogo en Montevideo y Ciudad de la Costa @stop
 
 @section('descripcion') {{$Empresa->descripcion_empresa}} @stop
 

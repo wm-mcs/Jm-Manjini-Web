@@ -40,6 +40,11 @@
 }
 
 
+/* B o r d e s */
+.helper-border-top{
+  border-top:solid 1px $color-gris-lineas;
+}
+
 /* CLASES BOTONES */
 .boton-simple{
   background-color: $color-3; 
