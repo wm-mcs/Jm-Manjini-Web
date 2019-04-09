@@ -114,7 +114,7 @@ class Paginas_Controller extends Controller
     //Noticias
     public function get_pagina_noticias_listado(Request $Request)
     {
-        $Noticias = $this->NoticiasRepo->getEntidadActivasPaginadas($Request,2);
+        $Noticias = $this->NoticiasRepo->getEntidadActivasPaginadas($Request,50);
         $Empresa  = $this->EmpresaRepo->getEmpresaDatos();
         $Route                = 'post_contacto_form';   
 
