@@ -1,6 +1,6 @@
 <br>
 
-Solicitud de contacto de {{$nombre}} ({{$email}} / {{$telefono}})
+Solicitud de contacto de {{$nombre}} ({{$email}} )
 
 <br>
 
