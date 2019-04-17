@@ -22,7 +22,7 @@
     
       @include('paginas.home.home_libro')  
       @include('paginas.home.home_blog')  
-      <img data-src="{{url()}}/imagenes/Empresa/Portada/principal4.png" class="img-slider-size helper_max_width_100">
+      <img data-src="{{url()}}/imagenes/Empresa/Portada/principal4.jpg" class="img-slider-size helper_max_width_100">
       {{-- @include('paginas.home.home_precios')
       @include('paginas.home.home_garantia') --}}
 @stop      

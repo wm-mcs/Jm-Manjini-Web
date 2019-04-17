@@ -9,7 +9,7 @@
 
              <img data-src="{{url()}}/imagenes/Empresa/Libro/tapa-libro.jpg" style="width:300px; height: auto; margin:20px 0;">
 
-             <a class="btn btn-primary btn-xl  Slider_cabecera_boton_contacto" href="{{route('get_pagina_noticias_listado')}}">Descargar
+             <a class="btn btn-primary btn-xl  Slider_cabecera_boton_contacto" href="{{url()}}/libro/Recorriendo-conceptos-sobre-la-Violencia.pdf">Descargar
              </a>
             
           </div>

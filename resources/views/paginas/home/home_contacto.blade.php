@@ -8,7 +8,7 @@
         <div class="contiene_contacto_img">
           <img data-src="{{ url() }}/imagenes/team/1.jpg" class="contacto_img"> 
           <div class="contacto_name">Javier</div>
-          <div class="contacto_aclaracion color-text-gris"> Contáctame! contas conmigo ;)</div>
+          <div class="contacto_aclaracion color-text-gris"> Contáctame!</div>
           @if($Empresa->whatsapp_empresa != 'no')
                   <a class="footer-icono-social" href="{{$Empresa->link_whatsapp_send}}"> 
                     <i class="fab fa-whatsapp"></i>

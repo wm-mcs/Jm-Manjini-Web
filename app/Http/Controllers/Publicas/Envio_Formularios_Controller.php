@@ -38,7 +38,7 @@ class Envio_Formularios_Controller extends Controller
       $name               = $Request->get('nombre');
       $email              = $Request->get('email');
       $mensaje            = $Request->get('mensaje');
-      $Email_al_que_envia = 'javier'.$Dominio;
+      $Email_al_que_envia = $this->EmpresaRepo->getEmpresaDatos()->email;
       $Titulo_de_email    = $Request->get('titulo_email'); 
 
       
