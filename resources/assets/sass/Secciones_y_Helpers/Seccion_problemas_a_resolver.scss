@@ -1,0 +1,57 @@
+.section-problemas{
+
+    padding-top: 65px;
+    padding-bottom: 30px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 3px rgba(0,0,0,.2);
+    @include flexbox;       
+    @include flex-direction(column);
+    @include align-items(center); 
+
+}
+
+
+  .contiene-problemas{
+    width: 90%;
+    @include flexbox;       
+    @include flex-direction(row);
+    @include align-items(flex-start); 
+    @include justify-content(space-around);
+    @include flex-wrap(wrap);
+  }
+
+     .contiene-li-problemas{
+      padding:30px 10px;
+      border-radius:6px;
+      margin-top: 8px;
+      font-size: 24px;
+      color:$color-3;
+      width: 100%;
+
+     }
+
+
+
+
+@media (min-width: $BrackPoint-Secundario){
+
+.contiene-li-problemas{      
+      font-size: 28px;     
+      width: 49%;
+
+}
+
+}
+
+
+
+
+@media (min-width: $BrackPoint-Tercer){
+  .contiene-li-problemas{ 
+      width: 33%;
+      padding:30px 20px;
+  }
+
+  
+
+}

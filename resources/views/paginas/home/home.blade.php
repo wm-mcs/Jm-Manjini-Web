@@ -16,8 +16,7 @@
 
 @section('contenido')
       @include('paginas.home.home_about') 
-      {{-- @include('paginas.home.home_clientes') --}}
-
+      @include('paginas.home.home_lista_para_tratar')
       <img data-src="{{url()}}/imagenes/Empresa/Portada/principal3.jpg" class="img-slider-size helper_max_width_100">
     
       @include('paginas.home.home_libro')  
