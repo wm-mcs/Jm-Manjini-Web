@@ -44,7 +44,8 @@
         <div class="previo-boton">
             Contactame ahora !
         </div>
-        <a class="mt-5" href="https://api.whatsapp.com/send?phone={{$Empresa->numero_whatsapp_ya_arreglado}}&text=Hola!">
+        <img data-src="{{ url() }}/imagenes/team/1.jpg" class="img-previa-boton"> 
+        <a  href="https://api.whatsapp.com/send?phone={{$Empresa->numero_whatsapp_ya_arreglado}}&text=Hola!">
                       <div class="boton-simple">
                        {{$Empresa->celular_empresa}} <i class="fab fa-whatsapp"></i>
                       </div>
