@@ -39,17 +39,9 @@
                                 </li>
 </ul>
 
-<div class="contiene-llama-a-la-accion">
-    <div class="flex-row-center flex-justifice-space-around flex-wrap">
-        <div class="previo-boton">
-            Contactame ahora !
-        </div>
-        <img data-src="{{ url() }}/imagenes/team/1.jpg" class="img-previa-boton"> 
-        <a  href="https://api.whatsapp.com/send?phone={{$Empresa->numero_whatsapp_ya_arreglado}}&text=Hola!">
-                      <div class="boton-simple">
-                       {{$Empresa->celular_empresa}} <i class="fab fa-whatsapp"></i>
-                      </div>
-                    </a>
-    </div>
-</div>
+@include('paginas.home.home_llamada_a_la_accion') 
+
+
+
+
 </section>
