@@ -10,6 +10,12 @@
 
 }
 
+ .titulo-problema{
+  padding: 20px 20px;
+  font-size: 26px;
+  color:$color-3;
+ }
+
 
   .contiene-problemas{
     width: 90%;
@@ -31,7 +37,15 @@
 
      }
 
+.contiene-llama-a-la-accion{
+  width: 100%;
+  @include flexbox;       
+  @include flex-direction(column);
+  @include align-items(center); 
+  padding:30px 0;
+  background-color:white;
 
+}
 
 
 @media (min-width: $BrackPoint-Secundario){
@@ -48,6 +62,10 @@
 
 
 @media (min-width: $BrackPoint-Tercer){
+  
+  .titulo-problema{  
+   font-size: 32px;
+   }
   .contiene-li-problemas{ 
       width: 33%;
       padding:30px 20px;

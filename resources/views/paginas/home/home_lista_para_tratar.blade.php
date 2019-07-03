@@ -1,4 +1,6 @@
 <section class="section-problemas">
+
+<div class="titulo-problema">¿Sufres algo de esto?</div>    
 <ul class="contiene-problemas">     
                                 <li class="contiene-li-problemas">
                                     <i class="fas fa-check"></i> Ansiedad, Ataque de Pánico   
@@ -36,4 +38,17 @@
                                     <i class="fas fa-check"></i> Trastornos de la Infancia y Adolescencia
                                 </li>
 </ul>
+
+<div class="contiene-llama-a-la-accion">
+    <div class="flex-row-center flex-justifice-space-around flex-wrap">
+        <div class="previo-boton">
+            Contactame ahora !
+        </div>
+        <a class="mt-5" href="https://api.whatsapp.com/send?phone={{$Empresa->numero_whatsapp_ya_arreglado}}&text=Hola!">
+                      <div class="boton-simple">
+                       {{$Empresa->celular_empresa}} <i class="fab fa-whatsapp"></i>
+                      </div>
+                    </a>
+    </div>
+</div>
 </section>
