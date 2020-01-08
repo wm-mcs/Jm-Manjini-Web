@@ -4,7 +4,7 @@
           <div class="col-lg-12 text-center">
             <h2 class="section-heading">Blog</h2>
             <hr class="my-4">
-            <h4 class="text-muted mb-4">Ultimos artículos</h4>
+            
           </div>
         </div>
 
@@ -39,6 +39,8 @@
          
 
         </div>
+        <br>
+        <br>
          <a class="btn btn-primary btn-xl  Slider_cabecera_boton_contacto" href="{{route('get_pagina_noticias_listado')}}">Ver todas</a>
       </div>
        
