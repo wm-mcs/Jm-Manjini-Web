@@ -106,6 +106,8 @@
 </div>
 </div>
 
+<br>
+
   
 
 
@@ -114,6 +116,8 @@
        {{html_entity_decode($Noticia->contenido_render)}}
 
    </div>
+
+   <br>
 
   
 
