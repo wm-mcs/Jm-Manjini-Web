@@ -97,22 +97,47 @@ class Noticia extends Model
     {
         $cadena = $this->description;
 
+
+        $cadena = str_replace('(H1)' ,'<h1 class="post-individual-section-h1">', $cadena);
+        $cadena = str_replace('(/H1)' ,'</h1><hr class="post-hr"           >', $cadena);
+
         //parrafos
         $cadena = str_replace('(P)' ,'<p class="post-individual-p">', $cadena);
         $cadena = str_replace('(/P)' ,'</p>', $cadena);
+
+
+        //text bold  
+        $cadena = str_replace('(B)' ,'<strong>', $cadena);  
+        $cadena = str_replace('(/B)' ,'</strong>', $cadena);
 
         //titulos
         $cadena = str_replace('(T)' ,'<h2 class="post-individual-section-titulo">', $cadena);
         $cadena = str_replace('(/T)' ,'</h2>', $cadena);
 
+         //sub titulos
+        $cadena = str_replace('(ST)' ,'<h3 class="post-individual-section-sub-titulo Helper-OrdenarHijo-columna-self-left"> ', $cadena);
+        $cadena = str_replace('(/ST)' ,'</h3><div class="post-hr Helper-OrdenarHijo-columna-self-left"           ></div>', $cadena);
+
+        //mensaje box
+        $cadena = str_replace('(MBOX)' ,'<div class="post-individual-section-mensaje-box">', $cadena);
+        $cadena = str_replace('(/MBOX)' ,'</div>', $cadena);
+
+        //ul
+        $cadena = str_replace('(U)' ,'<ul class="post-individual-section-ul">', $cadena);
+        $cadena = str_replace('(/U)' ,'</ul>', $cadena);
+
+        //li
+        $cadena = str_replace('(L)' ,'<li class="post-individual-section-li">', $cadena);
+        $cadena = str_replace('(/L)' ,'</li>', $cadena);
+
         //links
-        $cadena = str_replace('(A)' ,'<a href="', $cadena);
+        $cadena = str_replace('(A)' ,'<a class="post-individual-links" href="', $cadena);
         $cadena = str_replace('(/A)' ,'">', $cadena);
         $cadena = str_replace('(AT)' ,'', $cadena);
         $cadena = str_replace('(/AT)' ,'</a>', $cadena);
 
         //img
-        $cadena = str_replace('(IMG)' ,'<img class="post-img-secundarias" data-src="', $cadena);
+        $cadena = str_replace('(IMG)' ,'<img class="post-img-secundarias" alt="imagen de '.$this->name .  '"  data-src="', $cadena);
         $cadena = str_replace('(/IMG)' ,'">', $cadena);
 
         $cadena = str_replace('(IMGT)' ,'<span class="post-img-texto" >', $cadena);
