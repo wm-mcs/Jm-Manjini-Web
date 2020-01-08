@@ -36,9 +36,10 @@
           @endforeach
 
 
-          <a class="btn btn-primary btn-xl  Slider_cabecera_boton_contacto" href="{{route('get_pagina_noticias_listado')}}">Ver todas</a>
+         
 
         </div>
+         <a class="btn btn-primary btn-xl  Slider_cabecera_boton_contacto" href="{{route('get_pagina_noticias_listado')}}">Ver todas</a>
       </div>
        
        

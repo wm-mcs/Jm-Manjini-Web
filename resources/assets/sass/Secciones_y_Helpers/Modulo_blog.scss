@@ -23,20 +23,40 @@
 }
 
 
-   .noticia-lista-show-img{
+    .noticia-lista-show-img{
     width: 100%;
     height: auto;
     margin-bottom: 10px;
-    border-radius:8px;
-    padding: 4px;
+    
+    
    }
 
-   .noticia-lista-show-titulo{
-    text-align: center;
-    font-size: 14px;
-    margin-bottom: 8px;
-    width: 90%;
+   .noticia-sub-contenedor{
+    padding:15px;
+    width: 100%;
+    @include flexbox;       
+    @include flex-direction(column);
+    @include align-items(flex-start); 
    }
+
+   .noticia-lista-show-titulo{    
+    font-size: 12px;
+    margin-bottom: 8px;
+    width: 100%;
+   }
+
+   .noticia-lista-show-fecha{
+    font-size: 12px;
+    color:$Color-texto-gris-Mercadolibre;
+    margin-bottom: 8px;
+   }
+
+   .noticia-leer-mas{
+    font-size: 12px;
+    margin-top: 20px;
+   }
+
+
 
 
 
@@ -75,6 +95,16 @@
  background-color:$color-grey0 ;
 
 }
+
+.post-individual-links{
+  background-color: $color-3;
+  color:white;
+ }
+
+ .post-individual-links:hover{
+  background-color: $color-3;
+  color: $color-2;
+ }
 
 
 
