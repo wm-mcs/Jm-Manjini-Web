@@ -31,7 +31,7 @@ class Home_Public_Controller extends Controller
         
            
         $Empresa        = $this->EmpresaRepo->getEmpresaDatos(); 
-        $Noticias       = $this->NoticiasRepo->getEntidadesActivasYOrdenadas(2,'DESC');
+        $Noticias       = $this->NoticiasRepo->getEntidadesActivasYOrdenadas(3,'DESC');
 
         return view('paginas.home.home', compact('Empresa','Noticias'));
     }
