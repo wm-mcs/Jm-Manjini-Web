@@ -24,6 +24,7 @@
     @include align-items(flex-start); 
     @include justify-content(space-around);
     @include flex-wrap(wrap);
+    padding:20px;
   }
 
      .contiene-li-problemas{
