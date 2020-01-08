@@ -3,6 +3,7 @@
 namespace App\Entidades;
 
 use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
 
 
 
@@ -162,6 +163,14 @@ class Noticia extends Model
         $cadena = str_replace('¿' ,'', $cadena);
 
         return $cadena;
+    }
+
+
+    public function getFechaAttribute()
+    {
+       $Fecha = Carbon::parse($this->created_at);
+
+       return $Fecha->format('d-m-Y');
     }
 
     
