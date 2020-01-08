@@ -1,8 +1,17 @@
 <div class="aclaracion-de-etiquetas">
 
+
+  <div class="aclaracion-de-etiquetas-linea"> H1 El titulo del articulo : <span class="text-bold"> (H1)   (/H1) </span> </div>
   <div class="aclaracion-de-etiquetas-linea"> Títulos : <span class="text-bold"> (T)   (/T) </span> </div>
+   <div class="aclaracion-de-etiquetas-linea"> Sub Títulos : <span class="text-bold"> (ST)   (/ST) </span> </div>
 
   <div class="aclaracion-de-etiquetas-linea"> Párrafos: <span class="text-bold"> (P)   (/P) </span> </div>
+
+  <div class="aclaracion-de-etiquetas-linea"> Bold: <span class="text-bold"> (B)   (/B) </span> </div> 
+
+   <div class="aclaracion-de-etiquetas-linea"> Contiene lista: <span class="text-bold"> (U)   (/U) </span> </div> 
+
+   <div class="aclaracion-de-etiquetas-linea"> Elemento lista: <span class="text-bold"> (L)   (/L) </span> </div> 
 
   <div class="aclaracion-de-etiquetas-linea"> Links: <span class="text-bold"> (A) Aquí el link (/A) (AT) Aquí el texto (/AT) </span> </div>
 
@@ -14,5 +23,6 @@
     
   
 </div>
+
 
 
