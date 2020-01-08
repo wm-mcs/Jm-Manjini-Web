@@ -14,7 +14,24 @@
 
           @foreach($Noticias as $Noticia)
           
-            @include('paginas.noticias.noticias_lista_individual')   
+           <div class="contiene-noticia-lista-show">
+            <a class="get_width_100" href="{{$Noticia->route}}"> <img data-src="{{$Noticia->url_img_portada_chica}}" class="noticia-lista-show-img"> </a>
+
+            <div class="noticia-sub-contenedor">
+              <a  href="{{$Noticia->route}}"> <div class="noticia-lista-show-titulo">{{$Noticia->name}}</div>
+              </a>  
+              <div class="noticia-lista-show-fecha">
+                {{$Noticia->fecha}}
+              </div>
+
+              <a href="{{$Noticia->route}}" class="noticia-leer-mas">
+                Leer más
+              </a>
+            </div>
+            
+
+          </div>
+         
 
           @endforeach
 
