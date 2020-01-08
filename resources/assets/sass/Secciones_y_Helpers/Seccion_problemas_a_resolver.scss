@@ -30,11 +30,18 @@
       padding:30px 10px;
       border-radius:6px;
       margin-top: 8px;
-      font-size: 24px;
+      font-size: 16px;
       color:$color-3;
       width: 100%;
       list-style-type: none;
+      background-color:white;
+      border: solid thin $Color-Gris-Claro; 
+      cursor:pointer;
 
+     }
+     .contiene-li-problemas:hover{
+      background-color: $color-3 ;
+      color: white;
      }
 
 .contiene-llama-a-la-accion{
@@ -67,7 +74,7 @@
    font-size: 32px;
    }
   .contiene-li-problemas{ 
-      width: 33%;
+      width: 32%;
       padding:30px 20px;
   }
 
