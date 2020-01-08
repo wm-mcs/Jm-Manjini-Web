@@ -109,7 +109,7 @@
   
 
 
-   <div class="contenedor-listado-noticias" id="contenido-noticia">  
+   <div class="contenedor-blog" id="contenido-noticia">  
     
        {{html_entity_decode($Noticia->contenido_render)}}
 
