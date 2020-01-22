@@ -105,6 +105,9 @@
                 
           
           </div>
+          <div class="get_width_100 p-4 text-center">
+            Desarrollado por <a href="https://mauricio.mwebs.com.uy/"> Mauricio Costanzo</a>
+          </div>
         
          
 </section>
