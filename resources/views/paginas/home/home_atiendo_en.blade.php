@@ -4,7 +4,7 @@
           <div class="col-lg-12 text-center">
             <h2 class="section-heading">¿Donde atiendo?</h2>
             <hr class="my-4">
-            <h4 class="text-muted mb-5">En el el Centro y en Lagomar</h4>
+            
           
           </div>
         </div>
