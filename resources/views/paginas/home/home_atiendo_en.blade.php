@@ -32,7 +32,7 @@
                 </div>
 
                 {{-- //ciudad de la costa --}}
-                <div class="contiene-datos-direcciones">
+              {{--   <div class="contiene-datos-direcciones">
                   <div class="contiene-direccion-titulo">
                     <i class="fas fa-map-marker-alt"></i> Clínica de la Costa
                   </div>
@@ -45,7 +45,7 @@
                   <div class="get_width_100 flex-row-column mt-4">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d104748.38039467607!2d-56.129681402247996!3d-34.87162996907796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d-34.9070026!2d-56.1431158!4m5!1s0x959f89acb10c036d%3A0x7a97cce57818f4ed!2sClinica+de+la+costa!3m2!1d-34.8334274!2d-55.9799613!5e0!3m2!1ses-419!2suy!4v1553706734791" width="250" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
                   </div>                  
-                </div>
+                </div> --}}
 
         </div>
 
