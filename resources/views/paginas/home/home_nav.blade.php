@@ -16,7 +16,7 @@
             @endif     
 
              <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#donde">¿Donde atiendo?</a>
+              <a class="nav-link js-scroll-trigger" href="#donde">¿Dónde atiendo?</a>
              </li>
            
 
