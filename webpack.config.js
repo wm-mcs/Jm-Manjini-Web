@@ -25,7 +25,7 @@ module.exports = {
   },
 
   output: {
-    path: path.resolve(__dirname, "public"),
+    path: path.resolve(__dirname, "public2"),
     filename: "js/[name].[contenthash].js",
     chunkFilename: "js/[id].[chunkhash].js",
     publicPath: ""
@@ -86,10 +86,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(
-        __dirname,
-        "resources/views/paginas/webpack_react_index.blade.php"
-      ),
+      template: path.resolve(__dirname, "resources/assets/webpack/index.html"),
       minify: {
         collapseWhitespace: true
       }
