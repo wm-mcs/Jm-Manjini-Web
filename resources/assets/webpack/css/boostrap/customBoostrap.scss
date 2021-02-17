@@ -1,0 +1,17 @@
+@import "../templateDeColores/colores.scss";
+@import "../breakpoints/breakpoints.scss";
+@import "../breakpoints/containeMaxWidth";
+
+// Our Custom sass code
+
+$theme-colors: (
+	"primary": $primary,
+	"secondary": $secondary,
+	"light": lighten($secondary, 20%),
+	"dark": darken($secondary, 20%)
+);
+
+$grid-gutter-width: 15px !default;
+$grid-row-columns: 6 !default;
+
+@import "./scss/bootstrap.scss";
