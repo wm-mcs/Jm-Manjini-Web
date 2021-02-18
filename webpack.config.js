@@ -28,7 +28,10 @@ module.exports = {
     path: path.resolve(__dirname, "public2"),
     filename: "js/[name].[contenthash].js",
     chunkFilename: "js/[id].[chunkhash].js",
-    publicPath: ""
+    publicPath: "/"
+  },
+  devServer: {
+    historyApiFallback: true
   },
 
   optimization: {

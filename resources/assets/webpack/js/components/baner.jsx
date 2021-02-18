@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Typewriter from "typewriter-effect";
+import Data from "../config/data";
 
 import Foto from "./../../img/Javier/javier-mangini-radio.jpg";
 
@@ -23,12 +24,11 @@ const Baner = props => {
 					</div>
 					<div className="col-12 col-lg-6 px-2">
 						<p>
-							Soy licenciado en Psicología, Psicoanalista; Ex-Docente de la
-							UdelaR.
-							<strong>
+							Soy licenciado en psicología, psicoanalista y ex docente de la
+							UdelaR. <b className="text-bold">
 								Doy consultas privadas en el centro de Montevideo o por video
 								llamadas.
-							</strong>
+							</b>
 						</p>
 						<p>
 							Si sentís que algo no funciona bien en tu vida, que necesitás un
@@ -37,18 +37,18 @@ const Baner = props => {
 						</p>
 
 						<p>
-							Es bueno que sepas que no utilizo una única metodología para
-							entenderte y ayudarte. Como cada persona es única, la forma de
+							<strong>Es bueno que sepas que no utilizo una única metodología para
+							entenderte y ayudarte</strong>. Como cada persona es única, la forma de
 							ayudar también tiene que serlo.
 						</p>
 						<p>
 							Mi principal objetivo es poder ofrecerte una terapia personalizada
 							que se adapte a tus necesidades.
 						</p>
-						<h3>
+						<h3 className="">
 							<Typewriter
 								options={{
-									strings: ["Si querés que te ", "Mi celular es "],
+									strings: ["¿Querés que hablemos?", "Llamame o enviame un mensaje a mi celular",`${Data.cellphone}`,`${Data.cellphone}`],
 									autoStart: true,
 									loop: true
 								}}
