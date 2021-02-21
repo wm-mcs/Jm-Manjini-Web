@@ -1,13 +1,11 @@
-import React from "react";
+import React from 'react';
 
-import DefaultLayout from "../components/layout";
+import DefaultLayout from '../components/layout';
 
-const Contacto = () => {
-	return (
-		<DefaultLayout>
-			<h1>Contacto</h1>
-		</DefaultLayout>
-	);
-};
+const Contacto = () => (
+  <DefaultLayout>
+    <h1>Contacto</h1>
+  </DefaultLayout>
+);
 
 export default Contacto;

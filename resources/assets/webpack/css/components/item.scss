@@ -1,0 +1,15 @@
+.item-contenedor {
+  border: 6px solid transparent;
+}
+
+.item-contenedor__active {
+  border-top-color: $secondary;
+}
+
+.item-description {
+  font-weight: regular;
+  line-height: 1.6;
+  font-size: 1.2em;
+  color: #847a7a !important;
+  text-align: justify;
+}

@@ -1,7 +1,7 @@
-import "./../css/main.scss";
+import React from 'react';
+import { render } from 'react-dom';
+import App from './components/app';
 
-import React from "react";
-import { render } from "react-dom";
-import App from "./components/app";
+import '../css/main.scss';
 
-render(<App />, document.getElementById("root"));
+render(<App />, document.getElementById('root'));

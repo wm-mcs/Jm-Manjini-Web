@@ -1,28 +1,38 @@
-@import "./boostrap/customBoostrap.scss";
-@import "./components/error.scss";
+@import './boostrap/customBoostrap.scss';
+@import './components/error.scss';
+@import './components/item.scss';
 
 h1 {
-	font-weight: bold;
-	font-size: 3.5rem;
+  font-weight: bold;
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 3rem;
 }
 .decoracionHeaders {
-	position: relative;
+  position: relative;
 }
 .decoracionHeaders::after {
-	content: "";
-	background: lighten($secondary, 35%);
-	width: 100%;
-	height: 44%;
-	position: absolute;
-	top: 5px;
-	left: 0;
-	z-index: -2;
+  content: '';
+  background: lighten($secondary, 35%);
+  width: 100%;
+  height: 44%;
+  position: absolute;
+  top: 5px;
+  left: 0;
+  z-index: -2;
 }
 
 p {
-	font-weight: regular;
-	line-height: 1.6;
-	font-family: Montserrat;
-	font-size: 1.3em;
-	color: #847a7a !important;
+  font-weight: regular;
+  line-height: 1.6;
+  font-family: Montserrat;
+  font-size: 1.3em;
+  color: #847a7a !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }

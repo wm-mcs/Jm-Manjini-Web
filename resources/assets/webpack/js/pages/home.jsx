@@ -1,15 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React from 'react';
 
-import DefaultLayout from "../components/layout";
-import Baner from "../components/baner";
-import BanerContacto from "../components/banerContacto";
-const Home = () => {
-	return (
-		<DefaultLayout>
-			<Baner />
-			<BanerContacto/>
-		</DefaultLayout>
-	);
-};
+import DefaultLayout from '../components/layout';
+import Baner from '../components/baner';
+import BanerContacto from '../components/banerContacto';
+import Section1 from '../components/sectionHome1';
+
+const Home = () => (
+  <DefaultLayout>
+    <Baner />
+    <Section1 />
+    <BanerContacto />
+  </DefaultLayout>
+);
 
 export default Home;
