@@ -112,7 +112,7 @@ class Paginas_Controller extends Controller
         return view('paginas.noticias.noticia_individual', compact('Noticia', 'Empresa', 'Route'));
     }
 
-    public function get_blogs(Request $Request)
+    public function get_blogs(Request $Request, $array)
     {
         $arrat_config = [
             [
@@ -122,7 +122,7 @@ class Paginas_Controller extends Controller
             ],
         ];
 
-        $Blogs = $this->NoticiasRepo->getEntidadesMenosIdsYConFiltros($arrat_config, $Request->get('ide_ya_cargados'), 3, 'created_at', 'desc');
+        $Blogs = $this->NoticiasRepo->getEntidadesMenosIdsYConFiltros($arrat_config, [], 3, 'created_at', 'desc');
 
         return HelpersGenerales::formateResponseToVue(true, 'Se cargaron los blogs bien.', $Blogs);
     }

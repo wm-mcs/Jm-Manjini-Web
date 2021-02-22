@@ -7,6 +7,7 @@
     "format": "prettier --write {*.js,resources/assets/webpack/js/**/*.{js,jsx}}",
     "lint": "eslint {*.js,resources/assets/webpack/js/**/*.{js,jsx}} --fix"
   },
+  "proxy": "http://localhost:8080",
   "author": "Mauricio Costanzo",
   "license": "MIT",
   "devDependencies": {
@@ -37,6 +38,7 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "babel-eslint": "^10.1.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^7.2.0",
@@ -51,5 +53,17 @@
     "react-transition-group": "^4.4.1",
     "sweetalert": "^2.1.2",
     "typewriter-effect": "^2.17.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

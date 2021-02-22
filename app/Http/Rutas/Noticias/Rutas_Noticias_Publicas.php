@@ -11,7 +11,7 @@ Route::get('/Publicacion/{name}/{id}', [
     'as' => 'get_pagina_noticia_individual']
 );
 
-Route::post('get_blogs', [
+Route::get('get_blogs', [
     'uses' => 'Publicas\Paginas_Controller@get_blogs',
     'as' => 'get_blogs']
 );
