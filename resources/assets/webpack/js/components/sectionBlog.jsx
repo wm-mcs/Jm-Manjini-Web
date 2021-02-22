@@ -16,7 +16,7 @@ const SectionBlog = () => {
     idsYaUsados = idsYaUsados.join();
 
     return fetch(
-      `https://psicologojaviermangini.com.uy/get_blogs_ids:${idsYaUsados}`
+      `https://psicologojaviermangini.com.uy/get_blogs_ids/${idsYaUsados}`
     )
       .then((response) => {
         if (!response.ok) {
