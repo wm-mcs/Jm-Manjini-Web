@@ -15,30 +15,27 @@ const sectionHome1 = () => (
         <Item
           abierto={false}
           name="Ataques de pánico"
-          description="¿El corazón le late rápidamente, comienza a sudar y siente como si no pudiera respirar o pensar?  ¿Estos ataques ocurren en momentos impredecibles sin ningún factor desencadenante obvio, llenándole de inquietud de que pudiera tener otro en cualquier momento?"
+          description="Los síntomas más comunes son: el corazón late rápidamente (taquicardia), sudoración y puede llegar a sentir como si se estuviera por morir o volverse loco/a, desasosiego, y mucho miedo de que se vuelva a repetir. Los ataques pueden ocurrir en momentos inesperados sin ningún factor desencadenante obvio. "
         />
         <Item
           abierto={false}
           name="Depresión"
-          description="La depresión se presenta como un conjunto de síntomas de predominio afectivo (tristeza patológica, apatía, anhedonia, desesperanza, decaimiento, irritabilidad, sensación subjetiva de malestar e impotencia frente a las exigencias de la vida) aunque, en mayor o menor grado, también están presentes síntomas de tipo cognitivo, volitivo y somático, por lo que podría hablarse de una afectación global psíquica y física, haciendo especial énfasis en la esfera afectiva"
+          description="La depresión se presenta como un conjunto de síntomas de predominio afectivo, puede estar presente la tristeza, así como también puede sentirse apatía, desesperanza, decaimiento, irritabilidad, sensación de malestar y puede llegar a sentir que el peso de la vida es muy fuerte para cargarla. Aunque, no siempre, pero pueden aparecer síntomas de tipo somático."
         />
         <Item
           abierto={false}
           name="Trastorno borderline"
-          description="El trastorno límite de la personalidad es un trastorno de la salud mental que impacta la forma en que piensas y sientes acerca de ti mismo y de los demás, causando problemas para insertarte normalmente en la vida cotidiana. Incluye problemas de autoimagen, dificultad para manejar las emociones y el comportamiento, y un patrón de relaciones inestables."
+          description="El trastorno límite de la personalidad es un trastorno de la salud mental que impacta la forma en que piensas y sientes acerca de ti mismo y de los demás, causando problemas para insertarte normalmente en la vida cotidiana. Variabilidad en las emociones, sentimiento sostenido en el tiempo de vacío, catarata de emociones que inundan y no podemos controlar."
         />
         <Item
           abierto={false}
           name="Inseguridad"
-          description="La inseguridad es una reacción emocional acompañada de malestar y tensión que se presenta en diversas situaciones, generalmente asociada a situaciones de ámbito social y en la toma de decisiones.
-
-Supone una falta de seguridad y de confianza en uno mismo relacionada con una autopercepción negativa personal en la que no se confía en las propias capacidades, en los propios criterios para tomar decisiones ni en sus habilidades tanto sociales como competenciales.
-"
+          description="Supone una falta de seguridad y de confianza en uno mismo relacionada con una autopercepción a menudo negativa personal en la que no se confía en las propias capacidades, en los propios criterios para tomar decisiones ni en sus habilidades ya que en ocasiones anteriores pudieron no ser las mejores."
         />
         <Item
           abierto={false}
           name="Separación"
-          description="La separación de una pareja es una situación de crisis y tensión que afecta a toda la familia"
+          description="La separación de una pareja es una situación de crisis y tensión que afecta a toda la familia, por lo tanto, la guía de un profesional en el tema, resulta fundamental para disminuir el daño del sistema familiar completo."
         />
         <Item
           abierto={false}
@@ -48,13 +45,13 @@ Supone una falta de seguridad y de confianza en uno mismo relacionada con una au
         <Item
           abierto={false}
           name="Duelo"
-          description="El Duelo es un proceso interno que se produce ante la pérdida de una relación afectiva, sea del tipo que sea, pudiendo ir desde la pérdida de un trabajo, un cambio de residencia, la ruptura de una relación de pareja hasta la muerte de un ser querido."
+          description="El Duelo es un proceso interno que se produce ante la pérdida de un ser querido, pero también tenemos procesos de duelo en lo relativo a la perdida de una relación afectiva, sea del tipo que sea, pudiendo ir desde la pérdida de un trabajo, un cambio de residencia (Mudanza), la ruptura de una relación de pareja."
         />
 
         <Item
           abierto={false}
           name="Ansiedad"
-          description="La ansiedad es una reacción humana natural que afecta a la mente y al cuerpo. Tiene una importante función básica de supervivencia: la ansiedad es un sistema de alarma que se activa cuando una persona percibe un peligro o una amenaza."
+          description="La ansiedad es una reacción humana natural que afecta a la mente y al cuerpo. Tiene una importante función básica de supervivencia: la ansiedad es un sistema de alarma que se activa cuando una persona percibe un peligro o una amenaza. El problema no es la ansiedad en sí misma, sino cuando este mecanismo se activa sin que haga falta, por ejemplo, ponerse o sentirse ansioso por cuestiones futuras que tal vez no lleguen a darse nunca y por ende quedamos detenidos por pensamientos irreales."
         />
       </div>
     </div>

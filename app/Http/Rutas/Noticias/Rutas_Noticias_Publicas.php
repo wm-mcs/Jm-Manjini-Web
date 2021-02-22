@@ -1,12 +1,17 @@
-<?php 
+<?php
 
 //Noticias
-Route::get('/blog' , [                    
-  'uses' => 'Publicas\Paginas_Controller@get_pagina_noticias_listado',
-  'as'   => 'get_pagina_noticias_listado']
+Route::get('/blog', [
+    'uses' => 'Publicas\Paginas_Controller@get_pagina_noticias_listado',
+    'as' => 'get_pagina_noticias_listado']
 );
-     //Noticia Individual
-      Route::get('/Publicacion/{name}/{id}' , [                    
-        'uses' => 'Publicas\Paginas_Controller@get_pagina_noticia_individual',
-        'as'   => 'get_pagina_noticia_individual']
-      );
+//Noticia Individual
+Route::get('/Publicacion/{name}/{id}', [
+    'uses' => 'Publicas\Paginas_Controller@get_pagina_noticia_individual',
+    'as' => 'get_pagina_noticia_individual']
+);
+
+Route::post('get_blogs', [
+    'uses' => 'Publicas\Paginas_Controller@get_blogs',
+    'as' => 'get_blogs']
+);
