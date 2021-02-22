@@ -122,7 +122,7 @@ class Paginas_Controller extends Controller
             ],
         ];
 
-        $Blogs = $this->NoticiasRepo->getEntidadesMenosIdsYConFiltros($arrat_config, null, 3, 'created_at', 'desc');
+        $Blogs = $this->NoticiasRepo->getEntidadesMenosIdsYConFiltros($arrat_config, [], 3, 'created_at', 'desc');
 
         return HelpersGenerales::formateResponseToVue(true, 'Se cargaron los blogs bien.', $Blogs);
     }
