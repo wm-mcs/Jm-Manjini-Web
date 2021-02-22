@@ -11,7 +11,7 @@ const SectionBlog = () => {
       return 'hola';
     }
 
-    return Axios.get('https://psicologojaviermangini.com.uy/get_blogs', {
+    return Axios.post('https://psicologojaviermangini.com.uy/get_blogs', {
       ide_ya_cargados: idsYaUsados,
     })
       .then(function (response) {
