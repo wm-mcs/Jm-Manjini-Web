@@ -114,6 +114,9 @@ class Paginas_Controller extends Controller
 
     public function get_blogs(Request $Request, $ids)
     {
+        if ($ids == '0') {
+            return HelpersGenerales::formateResponseToVue(false, 'Ya se cargaron todos');
+        }
 
         $Blogs = $this->NoticiasRepo->getEntidadesActivasYOrdenadas(3, 'DESC');
 

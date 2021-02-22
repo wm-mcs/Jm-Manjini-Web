@@ -13,7 +13,7 @@ const SectionBlog = () => {
 
     let idsYaUsados = blogs.map((obj) => obj.id);
 
-    idsYaUsados = idsYaUsados.join();
+    idsYaUsados = idsYaUsados.length > 0 ? idsYaUsados.join() : 0;
 
     return fetch(
       `https://psicologojaviermangini.com.uy/get_blogs_ids/${idsYaUsados}`
