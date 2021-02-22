@@ -13,7 +13,7 @@ Route::get('/Publicacion/{name}/{id}', [
 
 Route::group(['middleware' => 'cors'], function () {
 
-    Route::get('get_blogs', [
+    Route::post('get_blogs', [
         'uses' => 'Publicas\Paginas_Controller@get_blogs',
         'as' => 'get_blogs']
     );

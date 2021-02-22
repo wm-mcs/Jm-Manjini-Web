@@ -12,7 +12,7 @@ const SectionBlog = () => {
     }
 
     return Axios.post('https://psicologojaviermangini.com.uy/get_blogs', {
-      ide_ya_cargados: idsYaUsados,
+      id: 5,
     })
       .then(function (response) {
         let data = response.data;
