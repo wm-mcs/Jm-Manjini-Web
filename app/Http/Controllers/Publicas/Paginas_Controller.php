@@ -112,7 +112,7 @@ class Paginas_Controller extends Controller
         return view('paginas.noticias.noticia_individual', compact('Noticia', 'Empresa', 'Route'));
     }
 
-    public function get_blogs(Request $Request)
+    public function get_blogs(Request $Request, $ids)
     {
 
         $Blogs = $this->NoticiasRepo->getEntidadesActivasYOrdenadas(3, 'DESC');
