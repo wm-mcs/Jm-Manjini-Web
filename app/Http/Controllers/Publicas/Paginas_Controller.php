@@ -114,15 +114,8 @@ class Paginas_Controller extends Controller
 
     public function get_blogs(Request $Request)
     {
-        $arrat_config = [
-            [
-                'where_tipo' => 'where',
-                'key' => 'estado',
-                'value' => 'si',
-            ],
-        ];
 
-        $Blogs = $this->NoticiasRepo->getEntidadesMenosIdsYConFiltros($arrat_config, [], 3, 'created_at', 'desc');
+        $Blogs = $this->NoticiasRepo->getEntidadesActivasYOrdenadas(3, 'DESC');
 
         return HelpersGenerales::formateResponseToVue(true, 'Se cargaron los blogs bien.', $Blogs);
     }
