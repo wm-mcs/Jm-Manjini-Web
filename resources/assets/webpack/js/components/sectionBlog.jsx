@@ -18,7 +18,7 @@ const SectionBlog = () => {
           method: 'POST',
           body: JSON.stringify({ ide_ya_cargados: idsYaUsados }),
           mode: 'no-cors',
-          credentials: "same-origin",
+          credentials: 'same-origin',
           headers: {
             'Content-Type': 'application/json',
             'Access-Control-Allow-Origin': '*',
