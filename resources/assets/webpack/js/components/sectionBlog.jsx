@@ -8,7 +8,7 @@ const SectionBlog = () => {
 
   const fetcData = async () => {
     if (!loadMore) {
-      return console.log('Ya se pidío todo');
+      return 'hola';
     }
 
     try {
@@ -17,32 +17,32 @@ const SectionBlog = () => {
         {
           method: 'POST',
           body: JSON.stringify({ ide_ya_cargados: idsYaUsados }),
-          mode: 'no-cors',
+
           credentials: 'same-origin',
           headers: {
             'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': '*',
-            // 'Content-Type': 'application/x-www-form-urlencoded',
+            Accept: 'application/json',
           },
         }
       );
 
       const content = await response.json();
 
-      if (response.status !== 200) {
+      if (!response.ok) {
+        console.log('Hola');
         throw Error('Error al conectar a la API');
       } else {
-        setBlogs(blogs.concat(content.Data));
-
-        if ((content.Data, length == 0)) {
+        if (content.Data.length == 0) {
           setLoadMore(false);
+        } else {
+          setBlogs(blogs.concat(content.Data));
         }
       }
 
       setLoading(false);
     } catch (error) {
       setLoading(false);
-      console.log(error.message);
+      console.error(error);
     }
   };
 
