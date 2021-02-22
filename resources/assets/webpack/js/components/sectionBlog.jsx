@@ -7,9 +7,8 @@ const SectionBlog = () => {
   const [idsYaUsados, setIdsYaUsados] = useState([]);
 
   const fetcData = async () => {
-
-    if(!loadMore){
-        return console.log('Ya se pidío todo');
+    if (!loadMore) {
+      return console.log('Ya se pidío todo');
     }
 
     try {
@@ -18,6 +17,13 @@ const SectionBlog = () => {
         {
           method: 'POST',
           body: JSON.stringify({ ide_ya_cargados: idsYaUsados }),
+          mode: 'no-cors',
+          credentials: "same-origin",
+          headers: {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*',
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+          },
         }
       );
 
@@ -28,8 +34,8 @@ const SectionBlog = () => {
       } else {
         setBlogs(blogs.concat(content.Data));
 
-        if(content.Data,length == 0){
-            setLoadMore(false);
+        if ((content.Data, length == 0)) {
+          setLoadMore(false);
         }
       }
 
@@ -46,7 +52,12 @@ const SectionBlog = () => {
 
   return (
     <section className="w-100 py-5">
-      <div className="container d-flex flex-column align-items-center"></div>
+      <div className="container d-flex flex-column align-items-center">
+        <h2 className="mb-5 text-center decoracionHeaders">Mi blog</h2>
+        <p className="col-12 text-center">
+          Artículo que pueden ayudarte mientras te decidís a contactarme.
+        </p>
+      </div>
     </section>
   );
 };
