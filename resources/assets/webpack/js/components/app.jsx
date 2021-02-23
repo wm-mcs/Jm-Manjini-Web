@@ -6,6 +6,7 @@ import ErrorWrapper from './error';
 
 const Home = lazy(() => import('../pages/home'));
 const Contacto = lazy(() => import('../pages/contacto'));
+const Blog = lazy(() => import('../pages/blog'));
 
 const App = () => (
   <Router>
@@ -14,6 +15,7 @@ const App = () => (
         <Route exact path="/" component={Home} />
         <ErrorWrapper>
           <Route exact path="/contactar" component={Contacto} />
+          <Route exact path="/blog" component={Blog} />
         </ErrorWrapper>
       </Switch>
     </Suspense>

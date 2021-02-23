@@ -7,15 +7,19 @@ const Footer = () => (
       <div className="container">
         <div className="row">
           <nav className="col-6">
-            <a className="ml-3" href="">
+            <Link className="ml-3" to="sobre-mi">
+              {' '}
               ¿Quién es Javier Mangini?
-            </a>
-            <a className="ml-3" href="">
+            </Link>
+
+            <Link className="ml-3" to="blog">
+              {' '}
               Blog de Javier Mangini
-            </a>
-            <a className="ml-3" href="">
+            </Link>
+
+            <Link className="ml-3" to="contactar">
               Hablar con Javier Mangini
-            </a>
+            </Link>
           </nav>
           <div className="col-6"></div>
         </div>
