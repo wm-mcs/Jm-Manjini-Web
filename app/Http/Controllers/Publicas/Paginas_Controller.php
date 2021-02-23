@@ -123,7 +123,15 @@ class Paginas_Controller extends Controller
             $Ids = explode($Ids, ',');
         }
 
-        $Blogs = $this->NoticiasRepo->getEntidadesActivasYOrdenadas($Cantidad, 'DESC');
+        $arrayConsulta = [
+            [
+                'where_tipo' => 'where',
+                'key' => 'estado',
+                'value' => 'si',
+            ],
+        ];
+
+        $Blogs = $this->NoticiasRepo->getEntidadesMenosIdsYConFiltros($arrayConsulta, $Ids, $Cantidad, 'created_at', 'DESC');
 
         return HelpersGenerales::formateResponseToVue(true, 'Se cargaron los blogs bien.', $Blogs);
     }

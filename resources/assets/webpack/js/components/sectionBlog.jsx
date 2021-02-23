@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import Blog from './blog';
 
 const SectionBlog = () => {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [blogs, setBlogs] = useState([]);
   const [loadMore, setLoadMore] = useState(true);
 
@@ -15,14 +16,18 @@ const SectionBlog = () => {
       return console.log('se cargaron todos');
     }
 
+    setLoading(true);
+
     let idsYaUsados = blogs.map((obj) => obj.id);
 
     idsYaUsados = idsYaUsados.length > 0 ? idsYaUsados.join() : 1;
 
-    const CANTIDAD = 5;
+    console.log(idsYaUsados);
+
+    const CANTIDAD = '4';
 
     return fetch(
-      `https://psicologojaviermangini.com.uy/get_blogs_ids?ids=${idsYaUsados}?cantidad=${CANTIDAD}`
+      `https://psicologojaviermangini.com.uy/get_blogs_ids?ids=${idsYaUsados}&cantidad=${CANTIDAD}`
     )
       .then((response) => {
         if (!response.ok) {
@@ -57,7 +62,28 @@ const SectionBlog = () => {
         <p className="col-12 text-center mb-5">
           Artículo que pueden ayudarte mientras te decidís a contactarme.
         </p>
+
         <div className="row">{blogsYaIterados}</div>
+
+        {loading && (
+          <div className="w-100 mb-5 ">
+            <Skeleton count={5} />
+          </div>
+        )}
+
+        {!loading && loadMore && (
+          <div className="row my-5">
+            <div className="col-12 d-lfex align-items-center flex-column">
+              <button
+                type="button"
+                onClick={fetcData}
+                className="btn btn-secondary btn-lg   text-uppercase"
+              >
+                Cargar más
+              </button>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );
