@@ -127,7 +127,7 @@ class Paginas_Controller extends Controller
         if ($Ids == '1') {
 
         } else {
-            $Ids = explode($Ids, ',');
+            $Ids = explode(',', $Ids);
         }
 
         dd($Request->get('ids'), $Ids);
