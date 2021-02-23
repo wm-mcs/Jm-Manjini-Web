@@ -125,7 +125,7 @@ class Paginas_Controller extends Controller
         $Cantidad = $Request->get('cantidad');
 
         if ($Ids == '1') {
-
+            $Ids = [];
         } else {
             $Ids = array_values(explode(',', $Ids));
 
