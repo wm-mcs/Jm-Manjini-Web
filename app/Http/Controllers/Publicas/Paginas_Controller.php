@@ -125,10 +125,12 @@ class Paginas_Controller extends Controller
         $Cantidad = $Request->get('cantidad');
 
         if ($Ids == '1') {
-            return HelpersGenerales::formateResponseToVue(false, 'Ya se cargaron todos', $this->NoticiasRepo->getEntidadesMenosIdsYConFiltros($arrayConsulta, [], $Cantidad, 'created_at', 'DESC'));
+
         } else {
             $Ids = explode($Ids, ',');
         }
+
+        dd($Request->get('ids'), $Ids);
 
         $Blogs = $this->NoticiasRepo->getEntidadesMenosIdsYConFiltros($arrayConsulta, $Ids, $Cantidad, 'created_at', 'DESC');
 
