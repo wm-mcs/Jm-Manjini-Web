@@ -5,7 +5,7 @@ const Blog = (props) => {
   const Post = props.blog;
   return (
     <div className="col-6 col-lg-3 mb-4 px-2">
-      <div className="w-100 shadow">
+      <div className="w-100 shadow h-100">
         <img
           className="blog-card-img"
           src={Post.url_img_portada_chica}
