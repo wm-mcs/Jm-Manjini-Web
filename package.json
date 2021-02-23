@@ -2,8 +2,8 @@
   "name": "proyecto",
   "private": true,
   "scripts": {
-    "start": "webpack serve --mode development",
-    "build": "webpack --mode production",
+    "start": "webpack serve --config development.webpack.config.js",
+    "build": "webpack --config production.webpack.config.js",
     "format": "prettier --write {*.js,resources/assets/webpack/js/**/*.{js,jsx}}",
     "lint": "eslint {*.js,resources/assets/webpack/js/**/*.{js,jsx}} --fix"
   },
