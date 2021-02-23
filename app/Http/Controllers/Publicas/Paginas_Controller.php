@@ -131,8 +131,6 @@ class Paginas_Controller extends Controller
 
         }
 
-        dd($Request->get('ids'), $Ids);
-
         $Blogs = $this->NoticiasRepo->getEntidadesMenosIdsYConFiltros($arrayConsulta, $Ids, $Cantidad, 'created_at', 'DESC');
 
         return HelpersGenerales::formateResponseToVue(true, 'Se cargaron los blogs bien.', $Blogs);
