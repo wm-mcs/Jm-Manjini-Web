@@ -51,11 +51,11 @@ const SectionBlog = () => {
   return (
     <section className="w-100 py-5">
       <div className="container d-flex flex-column align-items-center">
-        <h2 className="mb-5 text-center decoracionHeaders">Mi blog</h2>
-        <p className="col-12 text-center">
+        <h2 className="mb-5 text-center ">Mi blog</h2>
+        <p className="col-12 text-center mb-5">
           Artículo que pueden ayudarte mientras te decidís a contactarme.
         </p>
-        {blogsYaIterados}
+        <div className="row">{blogsYaIterados}</div>
       </div>
     </section>
   );

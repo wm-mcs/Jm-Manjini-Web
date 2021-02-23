@@ -6,7 +6,7 @@ const sectionHome1 = () => (
     <div className="container">
       <div className="row   ">
         <div className="col-12 d-flex flex-column align-items-center my-3 ">
-          <h2 className="mb-5 text-center decoracionHeaders">
+          <h2 className="mb-5 text-center ">
             Soy especialista en tratar niños y adultos que estén con alguno de
             estos problemas ...
           </h2>

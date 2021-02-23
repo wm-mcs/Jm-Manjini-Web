@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 import { FaChevronUp, FaChevronDown } from 'react-icons/fa';
 
 const descriptionComputada = (estaAbierto, description) => {
-  const lengthIdeal = 35;
+  const lengthIdeal = 30;
   if (!estaAbierto) {
     return `${description.slice(0, lengthIdeal)} ...`;
   }

@@ -25,7 +25,7 @@ const Header = (props) => (
         </div>
         <div className="col-5 col-lg-4">
           <Link to="/contactar">
-            <div className="btn btn-outline-secondary btn-lg  w-100 text-uppercase">
+            <div className="btn btn-primary btn-lg  w-100 text-uppercase">
               Contactar
             </div>
           </Link>
