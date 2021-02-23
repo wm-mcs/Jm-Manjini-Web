@@ -6,8 +6,12 @@ const Blog = (props) => {
   return (
     <div className="col-6 col-lg-4 mb-4 px-2">
       <div className="w-100 shadow">
-        <img className="blog-card-img" src={Post.url_img_portada} alt="Card" />
-        <div className="w-100 p-3">
+        <img
+          className="blog-card-img"
+          src={Post.url_img_portada_chica}
+          alt={`Foto del post ${Post.name}`}
+        />
+        <div className="w-100 py-4 p-3">
           <h5 className="card-title">{`${Post.name.slice(0, 30)} ...`}</h5>
           <p className="card-text" />
           <a href="/" className="btn btn-primary">

@@ -16,7 +16,7 @@ class Noticia extends Model
      * @var array
      */
     protected $fillable = ['name', 'description'];
-    protected $appends = ['url_img_portada'];
+    protected $appends = ['url_img_portada', 'url_img_portada_chica'];
 
     /**
      * PAra busqueda por nombre

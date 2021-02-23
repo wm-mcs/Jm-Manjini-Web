@@ -19,8 +19,10 @@ const SectionBlog = () => {
 
     idsYaUsados = idsYaUsados.length > 0 ? idsYaUsados.join() : 1;
 
+    const CANTIDAD = 5;
+
     return fetch(
-      `https://psicologojaviermangini.com.uy/get_blogs_ids/${idsYaUsados}`
+      `https://psicologojaviermangini.com.uy/get_blogs_ids?ids=${idsYaUsados}?cantidad=${CANTIDAD}`
     )
       .then((response) => {
         if (!response.ok) {

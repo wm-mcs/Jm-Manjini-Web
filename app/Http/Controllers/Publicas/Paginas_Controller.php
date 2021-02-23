@@ -112,13 +112,18 @@ class Paginas_Controller extends Controller
         return view('paginas.noticias.noticia_individual', compact('Noticia', 'Empresa', 'Route'));
     }
 
-    public function get_blogs(Request $Request, $ids)
+    public function get_blogs(Request $Request)
     {
-        if ($ids == '0') {
-            return HelpersGenerales::formateResponseToVue(false, 'Ya se cargaron todos');
+        $Ids = $Request->get('ids');
+        $Cantidad = $Request->get('cantidad');
+
+        if ($Request->get('ids') == '1') {
+            return HelpersGenerales::formateResponseToVue(false, 'Ya se cargaron todos', $this->NoticiasRepo->getEntidadesActivasYOrdenadas($Cantidad, 'DESC'));
+        } else {
+            $Ids = explode($Ids, ',');
         }
 
-        $Blogs = $this->NoticiasRepo->getEntidadesActivasYOrdenadas(3, 'DESC');
+        $Blogs = $this->NoticiasRepo->getEntidadesActivasYOrdenadas($Cantidad, 'DESC');
 
         return HelpersGenerales::formateResponseToVue(true, 'Se cargaron los blogs bien.', $Blogs);
     }
