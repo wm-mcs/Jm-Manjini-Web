@@ -1,19 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import Axios from 'axios';
+import Blog from './blog';
 
 const SectionBlog = () => {
   const [loading, setLoading] = useState(true);
   const [blogs, setBlogs] = useState([]);
   const [loadMore, setLoadMore] = useState(true);
 
+  const blogsYaIterados = blogs.map((blog, index) => (
+    <Blog blog={blog} key={blog.id} />
+  ));
+
   const fetcData = () => {
     if (!loadMore) {
-      return 'hola';
+      return console.log('se cargaron todos');
     }
 
     let idsYaUsados = blogs.map((obj) => obj.id);
 
-    idsYaUsados = idsYaUsados.length > 0 ? idsYaUsados.join() : 0;
+    idsYaUsados = idsYaUsados.length > 0 ? idsYaUsados.join() : 1;
 
     return fetch(
       `https://psicologojaviermangini.com.uy/get_blogs_ids/${idsYaUsados}`
@@ -26,8 +30,8 @@ const SectionBlog = () => {
         return response.json();
       })
       .then((responseAsJson) => {
-        const { data } = responseAsJson;
-        if (data.Data.length === 0) {
+        const data = responseAsJson;
+        if (data.Data.length === 0 || data.Validation === false) {
           setLoadMore(false);
         } else {
           setBlogs(blogs.concat(data.Data));
@@ -51,6 +55,7 @@ const SectionBlog = () => {
         <p className="col-12 text-center">
           Artículo que pueden ayudarte mientras te decidís a contactarme.
         </p>
+        {blogsYaIterados}
       </div>
     </section>
   );
