@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ValidarURL from '../helpers/validarUrl';
 
 const Blog = (props) => {
   const Post = props.blog;
@@ -14,9 +15,13 @@ const Blog = (props) => {
         <div className="w-100 py-4 p-3">
           <h5 className="card-title">{`${Post.name.slice(0, 30)} ...`}</h5>
           <p className="card-text" />
-          <a href="/" className="btn btn-primary">
+
+          <Link
+            className="btn btn-primary"
+            to={`/Publicacion/${Post.name.replace(ValidarURL, '-')}/${Post.id}`}
+          >
             Leer más
-          </a>
+          </Link>
         </div>
       </div>
     </div>
