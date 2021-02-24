@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import DefaultLayout from '../components/layout';
 import SectionBlog from '../components/sectionBlog';
+import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 
 const BlogIndividual = () => {
   const Id = useParams().id;
@@ -24,7 +25,7 @@ const BlogIndividual = () => {
         const data = responseAsJson;
         if (data.Validation === false) {
         } else {
-          setBlogs(data.Data);
+          setBlog(data.Data);
         }
         setLoading(false);
       })
@@ -43,7 +44,28 @@ const BlogIndividual = () => {
 
   return (
     <DefaultLayout>
-      <h2> {Id}</h2>
+      <div className="container d-flex flex-column align-items-center">
+        <div className="col-12 col-lg-10 my-4 shadow-sm p-2 p-lg-5  bg-white rounded">
+          {loading && (
+            <div className="w-100 mb-5 ">
+              <div className="w-100 mb-5 ">
+                <Skeleton count={4} />
+              </div>
+
+              <div className="w-100 mb-5 ">
+                <Skeleton count={4} />
+              </div>
+
+              <div className="w-100 mb-5 ">
+                <Skeleton count={4} />
+              </div>
+            </div>
+          )}
+
+          {!loading && <h2> {Id}</h2>}
+        </div>
+      </div>
+
       <SectionBlog cantidad="4" evitarIds={Id}>
         {' '}
         <h2 className="mb-5 text-center ">Más artículos relacionados</h2>
