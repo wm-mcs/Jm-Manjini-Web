@@ -17,4 +17,10 @@ Route::group(['middleware' => 'cors'], function () {
         'uses' => 'Publicas\Paginas_Controller@get_blogs',
         'as' => 'get_blogs']
     );
+
+    Route::get('get_blog_id', [
+        'uses' => 'Publicas\Paginas_Controller@get_blog_id',
+        'as' => 'get_blog_id']
+    );
+
 });

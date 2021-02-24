@@ -4,7 +4,7 @@ import Blog from './blog';
 
 const SectionBlog = (props) => {
   const [loading, setLoading] = useState(false);
-  const [blogs, setBlogs] = useState(props);
+  const [blogs, setBlogs] = useState([]);
   const [loadMore, setLoadMore] = useState(true);
 
   const blogsYaIterados = blogs.map((blog, index) => (
@@ -20,7 +20,9 @@ const SectionBlog = (props) => {
 
     let idsYaUsados = blogs.map((obj) => obj.id);
 
-    idsYaUsados = idsYaUsados.length > 0 ? idsYaUsados.join() : props.evitarIds;
+    props.evitarIds != '' ? idsYaUsados.push(props.evitarIds) : '';
+
+    idsYaUsados = idsYaUsados.length > 0 ? idsYaUsados.join() : '';
 
     console.log(idsYaUsados);
 

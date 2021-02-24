@@ -18,7 +18,7 @@ const Home = () => {
 
       if (currentScrollY > 600 && sectionBlogComponente == null) {
         const componente = (
-          <SectionBlog cantidad="4">
+          <SectionBlog cantidad="4" evitarIds="''">
             {' '}
             <h2 className="mb-5 text-center ">Mi blog</h2>
             <p className="col-12 text-center mb-5">

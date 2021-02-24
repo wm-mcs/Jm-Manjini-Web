@@ -136,6 +136,11 @@ class Paginas_Controller extends Controller
         return HelpersGenerales::formateResponseToVue(true, 'Se cargaron los blogs bien.', $Blogs);
     }
 
+    public function get_blog_id(Request $Request)
+    {
+        return HelpersGenerales::formateResponseToVue(true, 'Se cargó el blog', $this->NoticiasRepo->find($Request->get('id')));
+    }
+
     //Proyectos
     public function get_pagina_proyecto_listado(Request $Request)
     {

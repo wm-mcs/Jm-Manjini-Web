@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import DefaultLayout from '../components/layout';
+import SectionBlog from '../components/sectionBlog';
 
 const BlogIndividual = () => {
   const Id = useParams().id;
@@ -42,7 +43,14 @@ const BlogIndividual = () => {
 
   return (
     <DefaultLayout>
-      <h2>Blog {Id}</h2>
+      <h2> {Id}</h2>
+      <SectionBlog cantidad="4" evitarIds={Id}>
+        {' '}
+        <h2 className="mb-5 text-center ">Más artículos relacionados</h2>
+        <p className="col-12 text-center mb-5">
+          Artículos que pueden ayudarte mientras te decidís a contactarme
+        </p>
+      </SectionBlog>
     </DefaultLayout>
   );
 };
