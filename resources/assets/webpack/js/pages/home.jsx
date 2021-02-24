@@ -7,7 +7,7 @@ import Section1 from '../components/sectionHome1';
 import SectionBlog from '../components/sectionBlog';
 
 const Home = () => {
-  let prevScrollY = useRef(0);
+  const prevScrollY = useRef(0);
   const [goingUp, setGoingUp] = useState(false);
   const [muestra, setMuestra] = useState(false);
   const [sectionBlogComponente, setSectionBlogComponente] = useState(null);
@@ -17,7 +17,15 @@ const Home = () => {
       const currentScrollY = window.scrollY;
 
       if (currentScrollY > 600 && sectionBlogComponente == null) {
-        let componente = <SectionBlog />;
+        const componente = (
+          <SectionBlog cantidad="4">
+            {' '}
+            <h2 className="mb-5 text-center ">Mi blog</h2>
+            <p className="col-12 text-center mb-5">
+              Artículos que pueden ayudarte mientras te decidís a contactarme
+            </p>
+          </SectionBlog>
+        );
         setSectionBlogComponente(componente);
       }
 

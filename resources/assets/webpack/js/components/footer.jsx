@@ -21,7 +21,7 @@ const Footer = () => (
               Hablar con Javier Mangini
             </Link>
           </nav>
-          <div className="col-6"></div>
+          <div className="col-6" />
         </div>
       </div>
     </div>

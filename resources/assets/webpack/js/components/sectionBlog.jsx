@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import Blog from './blog';
 
-const SectionBlog = () => {
+const SectionBlog = (props) => {
   const [loading, setLoading] = useState(false);
   const [blogs, setBlogs] = useState([]);
   const [loadMore, setLoadMore] = useState(true);
@@ -24,7 +24,7 @@ const SectionBlog = () => {
 
     console.log(idsYaUsados);
 
-    const CANTIDAD = '4';
+    const CANTIDAD = props.cantidad;
 
     return fetch(
       `https://psicologojaviermangini.com.uy/get_blogs_ids?ids=${idsYaUsados}&cantidad=${CANTIDAD}`
@@ -58,10 +58,7 @@ const SectionBlog = () => {
   return (
     <section className="w-100 py-5">
       <div className="container d-flex flex-column align-items-center">
-        <h2 className="mb-5 text-center ">Mi blog</h2>
-        <p className="col-12 text-center mb-5">
-          Artículos que pueden ayudarte mientras te decidís a contactarme
-        </p>
+        {props.children}
 
         <div className="row">{blogsYaIterados}</div>
 
