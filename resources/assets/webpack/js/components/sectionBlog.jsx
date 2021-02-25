@@ -6,6 +6,7 @@ const SectionBlog = (props) => {
   const [loading, setLoading] = useState(false);
   const [blogs, setBlogs] = useState([]);
   const [loadMore, setLoadMore] = useState(true);
+  const [idsAEvitar, setIdsAEvitar] = useState(props.evitarIds);
 
   const blogsYaIterados = blogs.map((blog, index) => (
     <Blog blog={blog} key={blog.id} />
@@ -23,8 +24,6 @@ const SectionBlog = (props) => {
     props.evitarIds != '' ? idsYaUsados.push(props.evitarIds) : '';
 
     idsYaUsados = idsYaUsados.length > 0 ? idsYaUsados.join() : '';
-
-    console.log(idsYaUsados);
 
     const CANTIDAD = props.cantidad;
 

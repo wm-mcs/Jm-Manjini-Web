@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import DefaultLayout from '../components/layout';
 import SectionBlog from '../components/sectionBlog';
-import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 
 const BlogIndividual = () => {
   const Id = useParams().id;
@@ -18,7 +18,6 @@ const BlogIndividual = () => {
         if (!response.ok) {
           throw Error(response.statusText);
         }
-
         return response.json();
       })
       .then((responseAsJson) => {
@@ -62,17 +61,32 @@ const BlogIndividual = () => {
             </div>
           )}
 
-          {!loading && <h2> {Id}</h2>}
+          {!loading && blog != null && (
+            <div>
+              <h2 className="  text-center mb-5 decoracionHeaders">
+                {' '}
+                {blog.name}{' '}
+              </h2>
+              <div className="p-2 mb-5">
+                <img
+                  className="img-fluid"
+                  src={blog.url_img_portada}
+                  alt={`Foto de ${blog.name}`}
+                />
+              </div>
+            </div>
+          )}
         </div>
       </div>
-
-      <SectionBlog cantidad="4" evitarIds={Id}>
-        {' '}
-        <h2 className="mb-5 text-center ">Más artículos relacionados</h2>
-        <p className="col-12 text-center mb-5">
-          Artículos que pueden ayudarte mientras te decidís a contactarme
-        </p>
-      </SectionBlog>
+      {!loading && (
+        <SectionBlog cantidad="4" evitarIds={Id}>
+          {' '}
+          <h2 className="mb-5 text-center ">Más artículos relacionados</h2>
+          <p className="col-12 text-center mb-5">
+            Artículos que pueden ayudarte mientras te decidís a contactarme
+          </p>
+        </SectionBlog>
+      )}
     </DefaultLayout>
   );
 };
