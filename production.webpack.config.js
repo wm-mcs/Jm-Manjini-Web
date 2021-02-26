@@ -44,7 +44,7 @@ module.exports = {
       },
     },
     minimize: true,
-    minimizer: [new TerserPlugin(), new OptimizeCssAssetsWebpackPlugin()],
+    minimizer: [new TerserPlugin()],
   },
   module: {
     rules: [
