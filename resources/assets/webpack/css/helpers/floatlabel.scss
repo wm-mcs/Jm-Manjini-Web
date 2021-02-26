@@ -23,7 +23,7 @@
     transition: all 0.2s ease-in-out;
   }
   input {
-    z-index: 1;
+    z-index: 0;
     height: 3.5em;
     font-weight: bold;
 
@@ -34,12 +34,13 @@
     &:focus {
       background: rgba(255, 255, 255, 1);
     }
-    &:valid + label,
+
     &:focus + label {
       color: #333;
       font-size: 12px;
       -webkit-transform: translate3d(0, -10px, 0);
-      transform: translate3d(0, -10px, 0);
+      transform: translate3d(0, -10px, 0) !important;
+      z-index: 1;
     }
   }
 }

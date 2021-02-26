@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import '../../css/helpers/floatlabel.scss';
+
 const formularioContacto = () => {
   const [values, setValues] = useState({
     name: '',
@@ -64,6 +66,7 @@ const formularioContacto = () => {
               className="form-control"
               value={values.name}
               onChange={handlerChange}
+              placeholder="Tu nombre"
             />
             <label htmlFor="name">Nombre</label>
           </fieldset>
@@ -76,6 +79,7 @@ const formularioContacto = () => {
               className="form-control"
               value={values.email}
               onChange={handlerChange}
+              placeholder="Tu email"
             />
             <label htmlFor="email">Email</label>
           </fieldset>
@@ -88,6 +92,7 @@ const formularioContacto = () => {
               className="form-control"
               value={values.celular}
               onChange={handlerChange}
+              placeholder="Tu celular"
             />
             <label htmlFor="celular">Celular</label>
           </fieldset>
