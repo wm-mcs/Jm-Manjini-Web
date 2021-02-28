@@ -32,11 +32,13 @@ const Footer = () => (
             <div className="text-center text-white mb-0">
               <small>
                 Javier Mangini psicólogo psicoanalista en Montevideo © todos los
-                derechos reservados {`${new Date().getFullYear()}`} |{' '}
+                derechos reservados
+                {`${new Date().getFullYear()}`}
+                {` | `}
                 <a href="https://mwebs.com.uy/dise%C3%B1o-web-uruguay">
                   Diseño web en Uruguay
-                </a>{' '}
-                hecho por por{' '}
+                </a>
+                {` hecho por por `}
                 <a href="https://mwebs.com.uy/dise%C3%B1o-web-uruguay">mwebs</a>
               </small>
             </div>

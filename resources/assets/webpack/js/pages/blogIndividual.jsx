@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
-import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
+import { useParams } from 'react-router-dom';
+import Skeleton from 'react-loading-skeleton';
+import parse from 'html-react-parser';
 import DefaultLayout from '../components/layout';
 import SectionBlog from '../components/sectionBlog';
 
@@ -44,7 +45,7 @@ const BlogIndividual = () => {
   return (
     <DefaultLayout>
       <div className="container d-flex flex-column align-items-center">
-        <div className="col-12 col-lg-10 my-4 shadow-sm p-2 p-lg-5  bg-white rounded">
+        <div className="col-12 col-lg-10 my-4 p-2 p-lg-5  bg-white rounded">
           {loading && (
             <div className="w-100 mb-5 ">
               <div className="w-100 mb-5 ">
@@ -64,15 +65,16 @@ const BlogIndividual = () => {
           {!loading && blog != null && (
             <div>
               <h2 className="  text-center mb-5 decoracionHeaders">
-                {' '}
-                {blog.name}{' '}
+                {` ${blog.name} `}
               </h2>
-              <div className="p-2 mb-5">
+              <div className="p-2 mb-5 shadow-sm ">
                 <img
-                  className="img-fluid"
+                  className="img-fluid mb-5"
                   src={blog.url_img_portada}
                   alt={`Foto de ${blog.name}`}
                 />
+
+                <div>{parse(blog.contenido_render)}</div>
               </div>
             </div>
           )}

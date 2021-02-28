@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
+import Skeleton from 'react-loading-skeleton';
 import Blog from './blog';
 
 const SectionBlog = (props) => {
   const [loading, setLoading] = useState(false);
   const [blogs, setBlogs] = useState([]);
   const [loadMore, setLoadMore] = useState(true);
-  const [idsAEvitar, setIdsAEvitar] = useState(props.evitarIds);
 
   const blogsYaIterados = blogs.map((blog, index) => (
     <Blog blog={blog} key={blog.id} />
@@ -14,7 +13,7 @@ const SectionBlog = (props) => {
 
   const fetcData = () => {
     if (!loadMore) {
-      return console.log('se cargaron todos');
+      return '';
     }
 
     setLoading(true);
@@ -48,7 +47,6 @@ const SectionBlog = (props) => {
       })
       .catch((error) => {
         setLoading(false);
-        console.log('Looks like there was a problem: \n', error);
       });
   };
 

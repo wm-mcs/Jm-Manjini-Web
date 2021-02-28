@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Noticia extends Model
 {
-
     protected $table = 'noticias';
 
     /**
@@ -16,28 +15,32 @@ class Noticia extends Model
      * @var array
      */
     protected $fillable = ['name', 'description'];
-    protected $appends = ['url_img_portada', 'url_img_portada_chica'];
+    protected $appends  = ['url_img_portada', 'url_img_portada_chica', 'contenido_render'];
 
     /**
      * PAra busqueda por nombre
      */
-    public function scopeName($query, $name)
-    {
-        //si el paramatre(campo busqueda) esta vacio ejecutamos el codigo
-        /// trim() se utiliza para eliminar los espacios.
-        ////Like se usa para busqueda incompletas
-        /////%% es para los espacios adelante y atras
+    public function scopeName(
+        $query,
+        $name
+    ) {
+
+//si el paramatre(campo busqueda) esta vacio ejecutamos el codigo
+
+/// trim() se utiliza para eliminar los espacios.
+
+////Like se usa para busqueda incompletas
+
+/////%% es para los espacios adelante y atras
         if (trim($name) != "") {
             $query->where('name', "LIKE", "%$name%");
         }
-
     }
 
     public function scopeActive($query)
     {
 
         $query->where('estado', "si");
-
     }
 
     public function getUrlImgPortadaAttribute()
@@ -153,5 +156,4 @@ class Noticia extends Model
 
         return $Fecha->format('d-m-Y');
     }
-
 }
