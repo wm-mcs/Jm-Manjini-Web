@@ -134,7 +134,7 @@ class Noticia extends Model
         $cadena = str_replace('(YOU)', '<div class="video-responsive" > <iframe  src="https://www.youtube.com/embed/', $cadena);
         $cadena = str_replace('(/YOU)', '" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>', $cadena);
 
-        return htmlentities($cadena, ENT_QUOTES | ENT_IGNORE, "UTF-8");
+        return $cadena;
     }
 
     //funciones personalizadas para reciclar

@@ -73,8 +73,9 @@ const BlogIndividual = () => {
                   src={blog.url_img_portada}
                   alt={`Foto de ${blog.name}`}
                 />
-
-                <div>{parse(blog.contenido_render)}</div>
+                <div
+                  dangerouslySetInnerHTML={{ __html: blog.contenido_render }}
+                />
               </div>
             </div>
           )}
