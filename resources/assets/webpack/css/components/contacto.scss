@@ -22,7 +22,8 @@
         transform: translate3d(0, 0, 0);
         transition: all 0.2s ease-in-out;
     }
-    input {
+    input,
+    textarea {
         z-index: 0;
         height: 3.5em;
         font-weight: bold;
@@ -34,7 +35,7 @@
         &:focus {
             background: rgba(255, 255, 255, 1);
         }
-
+        &:valid + label,
         &:focus + label {
             color: #333;
             font-size: 12px;

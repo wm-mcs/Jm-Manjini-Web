@@ -44,11 +44,12 @@ const formularioContacto = () => {
     }));
   };
 
-  const handleSubmit = async  (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
+    try {
 
-    const rawResponse = await fetch('https://psicologojaviermangini.com.uy/post_contacto_form', {
+      const rawResponse = await fetch('https://psicologojaviermangini.com.uy/post_contacto_form', {
       method: 'POST',
       mode:'no-cors',
       headers: {
@@ -60,7 +61,13 @@ const formularioContacto = () => {
     const content = await rawResponse.json();
   
     console.log(content);
+    
     setSubmitted(true);
+      
+    } catch (error) {
+      alert(error.message);
+    }
+    
     
   };
 
