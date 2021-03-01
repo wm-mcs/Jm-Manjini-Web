@@ -44,12 +44,29 @@ const formularioContacto = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async  (e) => {
     e.preventDefault();
+
+
+    const rawResponse = await fetch('https://psicologojaviermangini.com.uy/post_contacto_form', {
+      method: 'POST',
+      mode:'no-cors',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(values)
+    });
+    const content = await rawResponse.json();
+  
+    console.log(content);
     setSubmitted(true);
+    
   };
 
-  return (
+  return submitted ? (
+    <h1 className="text-center my-5">Mensaje enviado.En breve te respondo.</h1>
+  ) : (
     <div className="w-100 my-5  d-flex flex-column align-items-center px-3 ">
       <div className="container row mx-0 bg-light p-1 p-lg-5 shadow-sm">
         <h3 className="h5 col-12 my-4">Formulario de contacto</h3>
@@ -137,6 +154,7 @@ const formularioContacto = () => {
         <div className="col-6 mb-4">
           <button
             type="button"
+            onClick={handleSubmit}
             className="btn btn-block btn-lg btn-primary w-100"
           >
             Enviar solicitud
