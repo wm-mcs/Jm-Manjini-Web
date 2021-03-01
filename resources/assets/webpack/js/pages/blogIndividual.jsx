@@ -74,6 +74,7 @@ const BlogIndividual = () => {
                   alt={`Foto de ${blog.name}`}
                 />
                 <div
+                  className="p-2 p-lg-5 d-flex flex-column align-items-center"
                   dangerouslySetInnerHTML={{ __html: blog.contenido_render }}
                 />
               </div>
