@@ -51,6 +51,7 @@ const formularioContacto = () => {
       const rawResponse = await fetch(
         'https://psicologojaviermangini.com.uy/post_contacto_form',
         {
+          credentials: 'include',
           method: 'POST',
           cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
           headers: {
