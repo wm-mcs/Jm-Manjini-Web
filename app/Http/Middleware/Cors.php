@@ -28,8 +28,6 @@ class Cors
         Closure $next
     ) {
 
-        dd('hola');
-
         if (!$this->isCorsRequest($request)) {
             return $next($request);
         }
@@ -50,16 +48,11 @@ class Cors
         }
 
         $response = $next($request)->withHeaders($headers);
+        dd($response);
 
         return $response;
     }
 
-    /**
-     * Incoming request is a CORS request if the Origin
-     * header is set and Origin !== Host
-     *
-     * @param  \Illuminate\Http\Request  $request
-     */
     private function isCorsRequest($request)
     {
         $requestHasOrigin = $request->headers->has('Origin');
