@@ -9,7 +9,7 @@ const Contacto = () => (
     <div className="container">
       <h1 className=" text-center my-5">¿Hablamos?</h1>
       <h2 className="h2 text-center my-5">
-        Podés contactarte conmigo de 3 maneras.
+        Podés contactarte conmigo de 3 maneras diferentes.
       </h2>
 
       <ol>
