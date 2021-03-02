@@ -28,6 +28,8 @@ class Cors
         Closure $next
     ) {
 
+        dd('hola');
+
         if (!$this->isCorsRequest($request)) {
             return $next($request);
         }
