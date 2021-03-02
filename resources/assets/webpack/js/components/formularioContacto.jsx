@@ -52,7 +52,7 @@ const formularioContacto = () => {
         'https://psicologojaviermangini.com.uy/post_contacto_form',
         {
           method: 'POST',
-         
+          cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
           headers: {
             Accept: 'application/json',
             'Content-Type': 'application/json',

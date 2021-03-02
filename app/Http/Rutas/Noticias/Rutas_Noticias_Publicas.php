@@ -11,14 +11,13 @@ Route::get('/Publicacion/{name}/{id}', [
     'as' => 'get_pagina_noticia_individual']
 );
 
-Route::post('post_contacto_form',
-    [
-        'uses' => 'Publicas\Envio_Formularios_Controller@post_contacto_form',
-        'as' => 'post_contacto_form',
-        'cors' => 'App\Http\Middleware\Cors',
-    ]);
-
 Route::group(['middleware' => 'cors'], function () {
+
+    Route::post('post_contacto_form',
+        [
+            'uses' => 'Publicas\Envio_Formularios_Controller@post_contacto_form',
+            'as' => 'post_contacto_form',
+        ]);
 
     Route::get('get_blogs_ids', [
         'uses' => 'Publicas\Paginas_Controller@get_blogs',

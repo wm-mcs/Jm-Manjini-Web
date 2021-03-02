@@ -48,7 +48,6 @@ class Cors
         }
 
         $response = $next($request)->withHeaders($headers);
-        dd($response);
 
         return $response;
     }
