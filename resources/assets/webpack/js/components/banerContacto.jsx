@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Typewriter from 'typewriter-effect';
 import Logo from '../../img/Javier/javier-psicologo-cuadrado.jpg';
 
-const BanerContacto = () => (
+const BanerContacto = (props) => (
   <div className="w-100 py-5 bg-light">
     <div className="container shadow-sm py-4 bg-white py-lg-2">
       <div className="row align-items-center justify-content-around">
@@ -18,18 +18,18 @@ const BanerContacto = () => (
           <h3 className="text-center mb-0">
             <Typewriter
               options={{
-                strings: ['Contactame ahora mismo'],
+                strings: [props.text1],
                 autoStart: true,
                 loop: true,
               }}
             />
           </h3>
-          <h5 className="text-center mb-0">¡Sin compromiso!</h5>
+          <h5 className="text-center mb-0">{props.text2}</h5>
         </div>
 
         <div className="col-12 col-lg-3 mb-2 mb-lg-0">
           <Link to="/contactar">
-            <div className="btn btn-outline-secondary btn-lg  w-100 text-uppercase">
+            <div className="btn btn-outline-primary btn-lg  w-100 text-uppercase">
               Contactar
             </div>
           </Link>

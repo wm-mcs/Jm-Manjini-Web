@@ -5,6 +5,7 @@ import Baner from '../components/baner';
 import BanerContacto from '../components/banerContacto';
 import Section1 from '../components/sectionHome1';
 import SectionBlog from '../components/sectionBlog';
+import Data from '../config/data';
 
 const Home = () => {
   const prevScrollY = useRef(0);
@@ -48,8 +49,12 @@ const Home = () => {
     <DefaultLayout>
       <Baner />
       <Section1 />
-      <BanerContacto />
+      <BanerContacto text1="Contactame ahora mismo" text2="¡Sin compromiso!" />
       {sectionBlogComponente != false ? sectionBlogComponente : ''}
+      <BanerContacto
+        text1={`Llamá cuando quieras`}
+        text2={`Mi celular es ${Data.cellphone}`}
+      />
     </DefaultLayout>
   );
 };

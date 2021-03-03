@@ -1,27 +1,59 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Data from '../config/data';
+import { FaFacebookSquare, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 
 const Footer = () => (
   <footer className="w-100 ">
-    <div className="w-100 py-5">
+    <div className="w-100 py-5  bg-gray-1">
       <div className="container">
         <div className="row">
-          <nav className="col-6">
-            <Link className="ml-3" to="sobre-mi">
-              {' '}
-              ¿Quién es Javier Mangini?
-            </Link>
-
-            <Link className="ml-3" to="blog">
-              {' '}
-              Blog de Javier Mangini
-            </Link>
-
-            <Link className="ml-3" to="contactar">
-              Hablar con Javier Mangini
-            </Link>
+          <nav className="row mx-0 col-12 col-lg-12">
+            <div className=" col-12 col-md-4 mb-3 ">
+              <Link className="btn btn-outline-primary   w-100" to="sobre-mi">
+                {' '}
+                ¿Quién es Javier Mangini?
+              </Link>
+            </div>
+            <div className=" col-12 col-md-4  mb-3">
+              <Link className="btn btn-outline-primary   w-100" to="blog">
+                {' '}
+                Blog
+              </Link>
+            </div>
+            <div className=" col-12 col-md-4  mb-3">
+              <Link className="btn btn-outline-primary   w-100" to="contactar">
+                {' '}
+                Contactar
+              </Link>
+            </div>
+            <div className=" col-12 col-md-4  mb-3">
+              <a
+                className="btn btn-outline-primary   w-100"
+                href={Data.whatsapp_link}
+              >
+                {' '}
+                {`Whatsapp `} <FaWhatsapp />
+              </a>
+            </div>
+            <div className=" col-12 col-md-4  mb-3">
+              <a
+                className="btn btn-outline-primary   w-100"
+                href={Data.instagram_link}
+              >
+                {' '}
+                {`Instagram `} <FaInstagram />
+              </a>
+            </div>
+            <div className=" col-12 col-md-4  mb-3">
+              <a
+                className="btn btn-outline-primary   w-100"
+                href={Data.facebook_link}
+              >
+                {`Facebook `} <FaFacebookSquare />
+              </a>
+            </div>
           </nav>
-          <div className="col-6" />
         </div>
       </div>
     </div>
