@@ -17,21 +17,11 @@ class Noticia extends Model
     protected $fillable = ['name', 'description'];
     protected $appends  = ['url_img_portada', 'url_img_portada_chica', 'contenido_render'];
 
-    /**
-     * PAra busqueda por nombre
-     */
     public function scopeName(
         $query,
         $name
     ) {
 
-//si el paramatre(campo busqueda) esta vacio ejecutamos el codigo
-
-/// trim() se utiliza para eliminar los espacios.
-
-////Like se usa para busqueda incompletas
-
-/////%% es para los espacios adelante y atras
         if (trim($name) != "") {
             $query->where('name', "LIKE", "%$name%");
         }
@@ -87,7 +77,7 @@ class Noticia extends Model
     {
         $cadena = $this->description;
 
-        $cadena = str_replace('(H1)', '<h1 class="h10">', $cadena);
+        $cadena = str_replace('(H1)', '<h1 class="h1">', $cadena);
         $cadena = str_replace('(/H1)', '</h1><hr class=""           >', $cadena);
 
         //parrafos
@@ -103,7 +93,7 @@ class Noticia extends Model
         $cadena = str_replace('(/T)', '</h2>', $cadena);
 
         //sub titulos
-        $cadena = str_replace('(ST)', '<h3 class=""> ', $cadena);
+        $cadena = str_replace('(ST)', '<h3 class="h3"> ', $cadena);
         $cadena = str_replace('(/ST)', '</h3><div class=""           ></div>', $cadena);
 
         //mensaje box

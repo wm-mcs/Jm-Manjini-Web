@@ -28,25 +28,41 @@ class Paginas_Controller extends Controller
         EmpresaRepo $EmpresaRepo,
         MarcaRepo $MarcaRepo,
         Marca_de_eventoRepo $Marca_de_eventoRepo) {
-        $this->ProyectoRepo = $ProyectoRepo;
-        $this->ImgHomeRepo = $ImgHomeRepo;
-        $this->NoticiasRepo = $NoticiasRepo;
-        $this->EmpresaRepo = $EmpresaRepo;
-        $this->MarcaRepo = $MarcaRepo;
+        $this->ProyectoRepo        = $ProyectoRepo;
+        $this->ImgHomeRepo         = $ImgHomeRepo;
+        $this->NoticiasRepo        = $NoticiasRepo;
+        $this->EmpresaRepo         = $EmpresaRepo;
+        $this->MarcaRepo           = $MarcaRepo;
         $this->Marca_de_eventoRepo = $Marca_de_eventoRepo;
     }
 
     //Contacto
     public function get_pagina_contacto()
     {
-        $Empresa = $this->EmpresaRepo->getEmpresaDatos();
-        return view('paginas.contacto.contacto', compact('Empresa'));
+        $Data = [
+            'title'       => '¿Hablamos? llamame cuando quieras',
+            'description' => '',
+            'og_img'      => url() . "/imagenes/javier-mangini-psicologo-logo.jpg",
+        ];
+
+        return view('paginas.webpack_compilado.index', compact('Data'));
+    }
+
+    public function get_pagina_sobre_mi()
+    {
+        $Data = [
+            'title'       => 'Sobre Javier Mangini',
+            'description' => '',
+            'og_img'      => url() . "/imagenes/javier-mangini-psicologo-logo.jpg",
+        ];
+
+        return view('paginas.webpack_compilado.index', compact('Data'));
     }
 
     //pagina donde estan las marcas
     public function get_pagina_marcas(Request $Request)
     {
-        $Marcas = $this->MarcaRepo->getMarcasParaWebOrdenadasAlfabeticamente($Request, 20);
+        $Marcas          = $this->MarcaRepo->getMarcasParaWebOrdenadasAlfabeticamente($Request, 20);
         $Marcas_buscador = $this->MarcaRepo->getMarcasParaWebOrdenadasAlfabeticamenteSinPaginacion();
 
         $Marca = '';
@@ -55,8 +71,10 @@ class Paginas_Controller extends Controller
             $Marca = $this->MarcaRepo->find($Request->get('select_marcas_id'));
 
             //redireccion a la pagina de eventos de esa Marca
+
             return redirect($Marca->route);
         }
+
         //consultar todas rango altorandom
         $MarcasRango3 = $this->MarcaRepo->getMarcasDesordenadasRandomSegunRank(3, null);
         $MarcasRango2 = $this->MarcaRepo->getMarcasDesordenadasRandomSegunRank(2, null);
@@ -64,6 +82,7 @@ class Paginas_Controller extends Controller
 
         return view('paginas.marcas.marcas', compact('MarcasRango3', 'MarcasRango2', 'MarcasRango1', 'Marcas', 'Marca', 'Marcas_buscador'));
     }
+
     //pagina de la marca individual
     public function get_pagina_marca_individual($name, $id, Request $Request)
     {
@@ -83,6 +102,7 @@ class Paginas_Controller extends Controller
     public function get_pagina_empresa()
     {
         $Empresa = $this->EmpresaRepo->getEmpresaDatos();
+
         return view('paginas.empresa.empresa', compact('Empresa'));
     }
 
@@ -95,21 +115,25 @@ class Paginas_Controller extends Controller
     //Noticias
     public function get_pagina_noticias_listado(Request $Request)
     {
-        $Noticias = $this->NoticiasRepo->getEntidadActivasPaginadas($Request, 50);
-        $Empresa = $this->EmpresaRepo->getEmpresaDatos();
-        $Route = 'post_contacto_form';
+        $Data = [
+            'title'       => 'Blog',
+            'description' => '',
+            'og_img'      => url() . "/imagenes/javier-mangini-psicologo-logo.jpg",
+        ];
 
-        return view('paginas.noticias.noticias', compact('Noticias', 'Empresa', 'Route'));
+        return view('paginas.webpack_compilado.index', compact('Data'));
     }
 
     //Noticias Individual
     public function get_pagina_noticia_individual($name, $id)
     {
-        $Noticia = $this->NoticiasRepo->find($id);
-        $Empresa = $this->EmpresaRepo->getEmpresaDatos();
-        $Route = 'post_contacto_form';
+        $Data = [
+            'title'       => 'Blog indivdual',
+            'description' => '',
+            'og_img'      => url() . "/imagenes/javier-mangini-psicologo-logo.jpg",
+        ];
 
-        return view('paginas.noticias.noticia_individual', compact('Noticia', 'Empresa', 'Route'));
+        return view('paginas.webpack_compilado.index', compact('Data'));
     }
 
     public function get_blogs(Request $Request)
@@ -117,18 +141,17 @@ class Paginas_Controller extends Controller
         $arrayConsulta = [
             [
                 'where_tipo' => 'where',
-                'key' => 'estado',
-                'value' => 'si',
+                'key'        => 'estado',
+                'value'      => 'si',
             ],
         ];
-        $Ids = $Request->get('ids');
+        $Ids      = $Request->get('ids');
         $Cantidad = $Request->get('cantidad');
 
         if ($Ids == '') {
             $Ids = [];
         } else {
             $Ids = array_values(explode(',', $Ids));
-
         }
 
         $Blogs = $this->NoticiasRepo->getEntidadesMenosIdsYConFiltros($arrayConsulta, $Ids, $Cantidad, 'created_at', 'DESC');
@@ -145,6 +168,7 @@ class Paginas_Controller extends Controller
     public function get_pagina_proyecto_listado(Request $Request)
     {
         $Proyectos = $this->ProyectoRepo->getEntidadActivasPaginadas($Request, 3);
+
         return view('paginas.proyecto.proyecto_listado', compact('Proyectos'));
     }
 
@@ -159,7 +183,7 @@ class Paginas_Controller extends Controller
     public function get_pagina_cv()
     {
         $Empresa = $this->EmpresaRepo->getEmpresaDatos();
+
         return view('paginas.cv.cv', compact('Empresa'));
     }
-
 }

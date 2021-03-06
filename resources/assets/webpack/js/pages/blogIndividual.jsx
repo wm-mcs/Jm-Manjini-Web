@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Skeleton from 'react-loading-skeleton';
-import parse from 'html-react-parser';
+
 import DefaultLayout from '../components/layout';
 import SectionBlog from '../components/sectionBlog';
 
@@ -26,12 +26,12 @@ const BlogIndividual = () => {
         if (data.Validation === false) {
         } else {
           setBlog(data.Data);
+          document.title = data.Data.name;
         }
         setLoading(false);
       })
       .catch((error) => {
         setLoading(false);
-        console.log('Algo raro pasó: \n', error);
       });
   };
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Data from '../config/data';
 import { FaFacebookSquare, FaInstagram, FaWhatsapp } from 'react-icons/fa';
+import Data from '../config/data';
 
 const Footer = () => (
   <footer className="w-100 ">
@@ -10,19 +10,19 @@ const Footer = () => (
         <div className="row">
           <nav className="row mx-0 col-12 col-lg-12">
             <div className=" col-12 col-md-4 mb-3 ">
-              <Link className="btn btn-outline-primary   w-100" to="sobre-mi">
+              <Link className="btn btn-outline-primary   w-100" to="/sobre-mi">
                 {' '}
                 ¿Quién es Javier Mangini?
               </Link>
             </div>
             <div className=" col-12 col-md-4  mb-3">
-              <Link className="btn btn-outline-primary   w-100" to="blog">
+              <Link className="btn btn-outline-primary   w-100" to="/blog">
                 {' '}
                 Blog
               </Link>
             </div>
             <div className=" col-12 col-md-4  mb-3">
-              <Link className="btn btn-outline-primary   w-100" to="contactar">
+              <Link className="btn btn-outline-primary   w-100" to="/contactar">
                 {' '}
                 Contactar
               </Link>

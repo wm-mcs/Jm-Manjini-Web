@@ -45,6 +45,11 @@ const Home = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [goingUp]);
 
+  useEffect(() => {
+    // Update the document title using the browser API
+    document.title = `Psicólogo en Montevideo Javier Mangini`;
+  });
+
   return (
     <DefaultLayout>
       <Baner />
@@ -52,7 +57,7 @@ const Home = () => {
       <BanerContacto text1="Contactame ahora mismo" text2="¡Sin compromiso!" />
       {sectionBlogComponente != false ? sectionBlogComponente : ''}
       <BanerContacto
-        text1={`Llamá cuando quieras`}
+        text1="Llamá cuando quieras"
         text2={`Mi celular es ${Data.cellphone}`}
       />
     </DefaultLayout>

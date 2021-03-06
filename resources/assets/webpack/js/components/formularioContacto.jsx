@@ -22,6 +22,8 @@ const formularioContacto = () => {
   };
 
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState([]);
 
   const handlerChange = (event) => {
     const { target } = event;
@@ -44,33 +46,66 @@ const formularioContacto = () => {
     }));
   };
 
+  const submitCheck = () => {
+    let validation = true;
+    const propiedades = Object.keys(rules);
+    propiedades.forEach((propiedad) => {
+      const nameValidatio = `${propiedad}Validation`;
+      setValues((prevState) => ({
+        ...prevState,
+        [nameValidatio]: rules[propiedad].test(values[propiedad]),
+      }));
+      if (rules[propiedad].test(values[propiedad]) === false) {
+        validation = false;
+      }
+    });
+
+    return validation;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const checkInputs = submitCheck();
+
+    if (checkInputs === false) {
+    }
+
+    setLoading(true);
+    const csrfToken = document.head.querySelector('[name~=csrf-token][content]')
+      .content;
 
     try {
-      const rawResponse = await fetch(
-        'https://psicologojaviermangini.com.uy/post_contacto_form',
-        {
-          
-          method: 'POST',
-          cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-          headers: {
-            Accept: 'application/json',
-            'Content-Type': 'application/json',
-          },
-          body: values,
-        }
-      );
-      const content = await rawResponse.json();
+      const rawResponse = await fetch('/post_contacto_form', {
+        method: 'POST',
+        cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+        credentials: 'same-origin',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+          'X-CSRF-Token': csrfToken,
+        },
+        body: JSON.stringify(values),
+      });
+      const response = await rawResponse.json();
 
-      setSubmitted(true);
+      if (response.Validation) {
+        setSubmitted(true);
+        setLoading(false);
+      } else {
+        setLoading(false);
+        setErrors(Object.values(response.Data));
+      }
     } catch (error) {
+      setLoading(false);
       alert(error.message);
     }
   };
 
   return submitted ? (
-    <h1 className="text-center my-5">Mensaje enviado.En breve te respondo.</h1>
+    <h1 className="text-center my-5 py-5 text-success">
+      {' '}
+      Mensaje enviado correctamente 🙂 Te responderé en cuestión de minutos{' '}
+    </h1>
   ) : (
     <div className="w-100 my-5  d-flex flex-column align-items-center px-3 ">
       <div className="container row mx-0 bg-light p-1 p-lg-5 shadow-sm">
@@ -156,14 +191,37 @@ const formularioContacto = () => {
           )}
         </div>
 
-        <div className="col-6 mb-4">
-          <button
-            type="button"
-            onClick={handleSubmit}
-            className="btn btn-block btn-lg btn-primary w-100"
-          >
-            Enviar solicitud
-          </button>
+        <div className="col-12  col-lg-6 mb-4">
+          {errors.length > 0 && (
+            <ul className="my-3 py-3 border border-danger bg-white">
+              {errors.map((error, index) => (
+                <li>
+                  <strong>
+                    <small className="mb-3 text-danger">{error[0]}</small>
+                  </strong>
+                </li>
+              ))}
+            </ul>
+          )}
+
+          {!loading ? (
+            <button
+              type="button"
+              onClick={handleSubmit}
+              className="btn btn-block btn-lg btn-primary w-100"
+            >
+              Enviar solicitud
+            </button>
+          ) : (
+            <div className="btn btn-block btn-lg btn-primary w-100 d-flex align-items-center justify-content-center">
+              <span
+                className="spinner-grow spinner-grow-sm mr-2"
+                role="status"
+                aria-hidden="true"
+              />
+              Enviando...
+            </div>
+          )}
         </div>
       </div>
     </div>

@@ -26,12 +26,16 @@ h2 {
   z-index: -2;
 }
 
-p {
+p , li{
   font-weight: regular;
   line-height: 1.6;
-
+  width: 100%;
   font-size: 1.3em;
   color: #847a7a !important;
+}
+
+li,ul{
+  width: 100%;
 }
 
 .cursor-pointer {

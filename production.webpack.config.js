@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const PurgecssPlugin = require('purgecss-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
+const { GenerateSW } = require('workbox-webpack-plugin');
 
 const PATHS = {
   src: path.join(__dirname, 'resources/assets/webpack/'),
@@ -26,7 +26,7 @@ module.exports = {
   mode: 'production',
 
   output: {
-    path: path.resolve(__dirname, 'public2'),
+    path: path.resolve(__dirname, 'public'),
     filename: 'js/[name].[contenthash].js',
     chunkFilename: 'js/[id].[chunkhash].js',
     publicPath: '/',
@@ -91,6 +91,7 @@ module.exports = {
       minify: {
         collapseWhitespace: true,
       },
+      filename: '../resources/views/paginas/webpack_compilado/index.blade.php',
     }),
     new MiniCssExtractPlugin({
       filename: 'css/[id].[contenthash].css',
@@ -102,5 +103,6 @@ module.exports = {
     new CleanWebpackPlugin({
       cleanOnceBeforeBuildPatterns: ['/js/**/*', '/css/**/*', '/assets/**/*'],
     }),
+    new GenerateSW(),
   ],
 };
