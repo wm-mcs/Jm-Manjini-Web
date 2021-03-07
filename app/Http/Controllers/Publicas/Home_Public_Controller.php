@@ -6,7 +6,6 @@ use App\Repositorios\EmpresaRepo;
 use App\Repositorios\ImgHomeRepo;
 use App\Repositorios\NoticiasRepo;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
 class Home_Public_Controller extends Controller
 {
@@ -25,19 +24,13 @@ class Home_Public_Controller extends Controller
     public function get_home(Request $Request)
     {
 
-        if (!Auth::guest() && Auth::user()->email == 'world_master_uy@hotmail.com') {
-            $Data = [
-                'title'       => 'Psicólogo en Montevideo Javier Mangini',
-                'description' => '',
-                'og_img'      => url() . "/imagenes/javier-mangini-psicologo-logo.jpg",
-            ];
+        $Data = [
+            'title'       => 'Psicólogo en Montevideo Javier Mangini',
+            'description' => 'Atiendo consultas en el centro de Montevideo o por video llamadas.',
+            'og_img'      => url() . "/imagenes/javier-mangini-psicologo-logo.jpg",
+        ];
 
-            return view('paginas.webpack_compilado.index', compact('Data'));
-        }
+        return view('paginas.webpack_compilado.index', compact('Data'));
 
-        $Empresa  = $this->EmpresaRepo->getEmpresaDatos();
-        $Noticias = $this->NoticiasRepo->getEntidadesActivasYOrdenadas(3, 'DESC');
-
-        return view('paginas.home.home', compact('Empresa', 'Noticias'));
     }
 }
