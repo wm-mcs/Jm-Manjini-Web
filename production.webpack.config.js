@@ -28,7 +28,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'public'),
     filename: 'js/[name].[contenthash].js',
-    chunkFilename: 'js/[id].[chunkhash].js',
+    chunkFilename: 'js/[name].[chunkhash].js',
     publicPath: '/',
   },
 
@@ -94,14 +94,15 @@ module.exports = {
       filename: '../resources/views/paginas/webpack_compilado/index.blade.php',
     }),
     new MiniCssExtractPlugin({
-      filename: 'css/[id].[contenthash].css',
-      chunkFilename: 'css/[id].[contenthash].css',
+      filename: 'css/[name].[contenthash].css',
+      chunkFilename: 'css/[name].[contenthash].css',
     }),
     new PurgecssPlugin({
       paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true }),
     }),
     new CleanWebpackPlugin({
-      cleanOnceBeforeBuildPatterns: ['/js/**/*', '/css/**/*', '/assets/**/*'],
+      cleanStaleWebpackAssets: true,
+      cleanOnceBeforeBuildPatterns: ['**/js/*', '**/css/*', '**/assets/*'],
     }),
     new GenerateSW(),
   ],

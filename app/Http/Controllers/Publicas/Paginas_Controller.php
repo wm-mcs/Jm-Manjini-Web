@@ -41,7 +41,7 @@ class Paginas_Controller extends Controller
     {
         $Data = [
             'title'       => '¿Hablamos? llamame cuando quieras',
-            'description' => '',
+            'description' => 'Te podés contactar conmigo de tres maneras diferentes: 1- Llamándome, 2- Por Whatsapp y 3- por email.',
             'og_img'      => url() . "/imagenes/javier-mangini-psicologo-logo.jpg",
         ];
 
@@ -52,7 +52,7 @@ class Paginas_Controller extends Controller
     {
         $Data = [
             'title'       => 'Sobre Javier Mangini',
-            'description' => '',
+            'description' => 'Lo que necesitás saber de mí para que puedas contactarme con el fin de ser tu psicólogo terapeuta.',
             'og_img'      => url() . "/imagenes/javier-mangini-psicologo-logo.jpg",
         ];
 
@@ -117,7 +117,7 @@ class Paginas_Controller extends Controller
     {
         $Data = [
             'title'       => 'Blog',
-            'description' => '',
+            'description' => 'El blod de psciología que te ayuda a resolver conflictos.',
             'og_img'      => url() . "/imagenes/javier-mangini-psicologo-logo.jpg",
         ];
 
@@ -127,8 +127,11 @@ class Paginas_Controller extends Controller
     //Noticias Individual
     public function get_pagina_noticia_individual($name, $id)
     {
+
+        $Blog = $this->NoticiasRepo->find($id);
+
         $Data = [
-            'title'       => 'Blog indivdual',
+            'title'       => $Blog->name,
             'description' => '',
             'og_img'      => url() . "/imagenes/javier-mangini-psicologo-logo.jpg",
         ];

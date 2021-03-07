@@ -87,8 +87,9 @@ const formularioContacto = () => {
         body: JSON.stringify(values),
       });
       const response = await rawResponse.json();
+       
 
-      if (response.Validation) {
+      if (response.Validacion) {
         setSubmitted(true);
         setLoading(false);
       } else {
@@ -97,7 +98,6 @@ const formularioContacto = () => {
       }
     } catch (error) {
       setLoading(false);
-      alert(error.message);
     }
   };
 
