@@ -74,12 +74,3 @@ $font-secondary: 'Raleway', sans-serif;
 
 
 
-
-/* fuente sociales */
-
-@font-face {
-font-family: 'Social-Media-Circled'; /* Nombre que va a tener esa font*/
-font-style: normal;
-font-weight: normal;
-src: local('../fonts/Social-Media-Circled'), url('../fonts/Social-Media-Circled.otf') format('truetype');
-}

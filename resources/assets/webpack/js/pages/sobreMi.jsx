@@ -30,7 +30,7 @@ const SobreMi = () => {
                 en quien puedas confiar.
               </li>
               <li className="mb-5">
-                Tenés curiosidad por conocer un poco más sobre mi.
+                Tenés curiosidad por conocer un poco más sobre mí.
               </li>
             </ol>
             <p className="mb-4">

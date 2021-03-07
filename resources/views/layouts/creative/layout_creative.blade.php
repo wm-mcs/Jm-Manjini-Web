@@ -5,18 +5,18 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    
+
+
 
     <title>@yield('titulo')</title>
-    <meta name="Description" content="@yield('descripcion')">      
+    <meta name="Description" content="@yield('descripcion')">
     <meta name="robots" content="@yield('robot')">
     <meta name="keywords" content="@yield('palabras_claves')">
 
-    {{-- css --}}   
+    {{-- css --}}
     @include('layouts.user_layout.css_fonts')
 
-   
+
 
   </head>
 
@@ -37,42 +37,42 @@
         </div>
       </div>
     </nav>
-    
+
 
 
     @yield('slider')
 
     <span id="app">
 
-     @yield('contenido') 
-   
-     
-      
-      @include('paginas.home.home_footer')
-      
+     @yield('contenido')
 
-          {{-- <div class="col-sm-10"> 
+
+
+      @include('paginas.home.home_footer')
+
+
+          {{-- <div class="col-sm-10">
     <h1>JSON</h1>
     <pre>
       @{{$data}}
     </pre>
   </div> --}}
-    </span> 
+    </span>
 
 
-       
- 
 
-    
+
+
+
 
 
 
     <!-- Scripts -->
-    <script src="{{url()}}{{ elixir('js/all.js')}} " ></script>  
+    <script src="{{asset('build/js/public.js')}}" ></script>
     @include('paginas.home.home_vue_script')
-    
 
-   
+
+
 
   </body>
 
