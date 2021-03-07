@@ -1,0 +1,96 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'rebuild',
+1 verbose cli   'node-sass' ]
+2 info using npm@3.10.10
+3 info using node@v6.17.1
+4 info readInstalled object
+5 verbose rebuild path, id [ 'C:\\Users\\Mauricio\\Proyectos\\Jm-Manjini-Web\\node_modules\\node-sass',
+5 verbose rebuild   'node-sass@5.0.0' ]
+6 verbose rebuild path, id [ 'C:\\Users\\Mauricio\\Proyectos\\Jm-Manjini-Web\\node_modules\\gulp-sass\\node_modules\\node-sass',
+6 verbose rebuild   'node-sass@4.14.1' ]
+7 silly rebuild set [ 'C:\\Users\\Mauricio\\Proyectos\\Jm-Manjini-Web\\node_modules\\node-sass',
+7 silly rebuild set   'C:\\Users\\Mauricio\\Proyectos\\Jm-Manjini-Web\\node_modules\\gulp-sass\\node_modules\\node-sass' ]
+8 info build C:\Users\Mauricio\Proyectos\Jm-Manjini-Web\node_modules\node-sass
+9 info lifecycle node-sass@5.0.0~preinstall: node-sass@5.0.0
+10 silly lifecycle node-sass@5.0.0~preinstall: no script for preinstall, continuing
+11 info linkStuff node-sass@5.0.0
+12 silly linkStuff node-sass@5.0.0 has C:\Users\Mauricio\Proyectos\Jm-Manjini-Web\node_modules as its parent node_modules
+13 verbose linkBins node-sass@5.0.0
+14 verbose link bins [ { 'node-sass': 'bin/node-sass' },
+14 verbose link bins   'C:\\Users\\Mauricio\\Proyectos\\Jm-Manjini-Web\\node_modules\\.bin',
+14 verbose link bins   false ]
+15 verbose linkMans node-sass@5.0.0
+16 verbose rebuildBundles node-sass@5.0.0
+17 verbose rebuildBundles [ 'ansi-styles', 'chalk', 'supports-color' ]
+18 verbose rebuild bundle C:\Users\Mauricio\Proyectos\Jm-Manjini-Web\node_modules\node-sass\node_modules\ansi-styles
+19 info build C:\Users\Mauricio\Proyectos\Jm-Manjini-Web\node_modules\node-sass\node_modules\ansi-styles
+20 info lifecycle ansi-styles@2.2.1~preinstall: ansi-styles@2.2.1
+21 silly lifecycle ansi-styles@2.2.1~preinstall: no script for preinstall, continuing
+22 info linkStuff ansi-styles@2.2.1
+23 silly linkStuff ansi-styles@2.2.1 has C:\Users\Mauricio\Proyectos\Jm-Manjini-Web\node_modules\node-sass\node_modules as its parent node_modules
+24 verbose linkBins ansi-styles@2.2.1
+25 verbose linkMans ansi-styles@2.2.1
+26 verbose rebuildBundles ansi-styles@2.2.1
+27 info lifecycle ansi-styles@2.2.1~install: ansi-styles@2.2.1
+28 silly lifecycle ansi-styles@2.2.1~install: no script for install, continuing
+29 info lifecycle ansi-styles@2.2.1~postinstall: ansi-styles@2.2.1
+30 silly lifecycle ansi-styles@2.2.1~postinstall: no script for postinstall, continuing
+31 verbose rebuild bundle C:\Users\Mauricio\Proyectos\Jm-Manjini-Web\node_modules\node-sass\node_modules\supports-color
+32 info build C:\Users\Mauricio\Proyectos\Jm-Manjini-Web\node_modules\node-sass\node_modules\supports-color
+33 info lifecycle supports-color@2.0.0~preinstall: supports-color@2.0.0
+34 silly lifecycle supports-color@2.0.0~preinstall: no script for preinstall, continuing
+35 info linkStuff supports-color@2.0.0
+36 silly linkStuff supports-color@2.0.0 has C:\Users\Mauricio\Proyectos\Jm-Manjini-Web\node_modules\node-sass\node_modules as its parent node_modules
+37 verbose linkBins supports-color@2.0.0
+38 verbose linkMans supports-color@2.0.0
+39 verbose rebuildBundles supports-color@2.0.0
+40 info lifecycle supports-color@2.0.0~install: supports-color@2.0.0
+41 silly lifecycle supports-color@2.0.0~install: no script for install, continuing
+42 info lifecycle supports-color@2.0.0~postinstall: supports-color@2.0.0
+43 silly lifecycle supports-color@2.0.0~postinstall: no script for postinstall, continuing
+44 info lifecycle node-sass@5.0.0~install: node-sass@5.0.0
+45 verbose lifecycle node-sass@5.0.0~install: unsafe-perm in lifecycle true
+46 verbose lifecycle node-sass@5.0.0~install: PATH: C:\Users\Mauricio\AppData\Roaming\nvm\v6.17.1\node_modules\npm\bin\node-gyp-bin;C:\Users\Mauricio\Proyectos\Jm-Manjini-Web\node_modules\node-sass\node_modules\.bin;C:\Users\Mauricio\Proyectos\Jm-Manjini-Web\node_modules\.bin;C:\Users\Mauricio\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Mauricio\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Users\Mauricio\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\Git\cmd;C:\php\php.exe;C:\Program Files\PuTTY;C:\HashiCorp\Vagrant\bin;C:\Users\Mauricio\AppData\Local\Microsoft\WindowsApps;C:\Users\Mauricio\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Mauricio\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\Mauricio\AppData\Local\GitHubDesktop\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+47 verbose lifecycle node-sass@5.0.0~install: CWD: C:\Users\Mauricio\Proyectos\Jm-Manjini-Web\node_modules\node-sass
+48 silly lifecycle node-sass@5.0.0~install: Args: [ '/d /s /c', 'node scripts/install.js' ]
+49 silly lifecycle node-sass@5.0.0~install: Returned: code: 0  signal: null
+50 info lifecycle node-sass@5.0.0~postinstall: node-sass@5.0.0
+51 verbose lifecycle node-sass@5.0.0~postinstall: unsafe-perm in lifecycle true
+52 verbose lifecycle node-sass@5.0.0~postinstall: PATH: C:\Users\Mauricio\AppData\Roaming\nvm\v6.17.1\node_modules\npm\bin\node-gyp-bin;C:\Users\Mauricio\Proyectos\Jm-Manjini-Web\node_modules\node-sass\node_modules\.bin;C:\Users\Mauricio\Proyectos\Jm-Manjini-Web\node_modules\.bin;C:\Users\Mauricio\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Mauricio\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Users\Mauricio\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\Git\cmd;C:\php\php.exe;C:\Program Files\PuTTY;C:\HashiCorp\Vagrant\bin;C:\Users\Mauricio\AppData\Local\Microsoft\WindowsApps;C:\Users\Mauricio\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Mauricio\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\Mauricio\AppData\Local\GitHubDesktop\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+53 verbose lifecycle node-sass@5.0.0~postinstall: CWD: C:\Users\Mauricio\Proyectos\Jm-Manjini-Web\node_modules\node-sass
+54 silly lifecycle node-sass@5.0.0~postinstall: Args: [ '/d /s /c', 'node scripts/build.js' ]
+55 silly lifecycle node-sass@5.0.0~postinstall: Returned: code: 1  signal: null
+56 info lifecycle node-sass@5.0.0~postinstall: Failed to exec postinstall script
+57 verbose stack Error: node-sass@5.0.0 postinstall: `node scripts/build.js`
+57 verbose stack Exit status 1
+57 verbose stack     at EventEmitter.<anonymous> (C:\Users\Mauricio\AppData\Roaming\nvm\v6.17.1\node_modules\npm\lib\utils\lifecycle.js:255:16)
+57 verbose stack     at emitTwo (events.js:106:13)
+57 verbose stack     at EventEmitter.emit (events.js:191:7)
+57 verbose stack     at ChildProcess.<anonymous> (C:\Users\Mauricio\AppData\Roaming\nvm\v6.17.1\node_modules\npm\lib\utils\spawn.js:40:14)
+57 verbose stack     at emitTwo (events.js:106:13)
+57 verbose stack     at ChildProcess.emit (events.js:191:7)
+57 verbose stack     at maybeClose (internal/child_process.js:920:16)
+57 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:230:5)
+58 verbose pkgid node-sass@5.0.0
+59 verbose cwd C:\Users\Mauricio\Proyectos\Jm-Manjini-Web
+60 error Windows_NT 10.0.18363
+61 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "rebuild" "node-sass"
+62 error node v6.17.1
+63 error npm  v3.10.10
+64 error code ELIFECYCLE
+65 error node-sass@5.0.0 postinstall: `node scripts/build.js`
+65 error Exit status 1
+66 error Failed at the node-sass@5.0.0 postinstall script 'node scripts/build.js'.
+66 error Make sure you have the latest version of node.js and npm installed.
+66 error If you do, this is most likely a problem with the node-sass package,
+66 error not with npm itself.
+66 error Tell the author that this fails on your system:
+66 error     node scripts/build.js
+66 error You can get information on how to open an issue for this project with:
+66 error     npm bugs node-sass
+66 error Or if that isn't available, you can get their info via:
+66 error     npm owner ls node-sass
+66 error There is likely additional logging output above.
+67 verbose exit [ 1, true ]

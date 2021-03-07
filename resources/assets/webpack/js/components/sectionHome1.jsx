@@ -7,7 +7,7 @@ const sectionHome1 = () => (
       <div className="row   ">
         <div className="col-12 d-flex flex-column align-items-center my-3 ">
           <h2 className="mb-5 text-center ">
-            Soy especialista en tratar niños y adultos que estén con alguno de
+            Soy especialista en tratar adolecentes y adultos que estén con alguno de
             estos problemas ...
           </h2>
         </div>
