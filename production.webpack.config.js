@@ -102,7 +102,7 @@ module.exports = {
     }),
     new CleanWebpackPlugin({
       cleanStaleWebpackAssets: true,
-      cleanOnceBeforeBuildPatterns: ['**/js/*', '**/css/*', '**/assets/*'],
+      cleanOnceBeforeBuildPatterns: ['js/*', 'css/*', 'assets/*'],
     }),
     new GenerateSW(),
   ],

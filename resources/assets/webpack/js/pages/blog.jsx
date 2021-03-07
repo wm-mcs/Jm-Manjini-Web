@@ -4,6 +4,9 @@ import SectionBlog from '../components/sectionBlog';
 
 const Contacto = () => {
   useEffect(() => {
+    if (window.scrollY != 0) {
+      window.scrollTo(0, 0);
+    }
     // Update the document title using the browser API
     document.title = `Blog del psicólogo Javier Mangini`;
   });

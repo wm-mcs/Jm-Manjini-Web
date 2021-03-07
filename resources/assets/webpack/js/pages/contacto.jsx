@@ -6,6 +6,9 @@ import Data from '../config/data';
 
 const Contacto = () => {
   useEffect(() => {
+    if (window.scrollY != 0) {
+      window.scrollTo(0, 0);
+    }
     // Update the document title using the browser API
     document.title = `Contactar a Javier Mangini`;
   });

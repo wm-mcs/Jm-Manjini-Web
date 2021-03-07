@@ -7,6 +7,9 @@ import { Link } from 'react-router-dom';
 
 const SobreMi = () => {
   useEffect(() => {
+    if (window.scrollY != 0) {
+      window.scrollTo(0, 0);
+    }
     document.title = `Sobre Javier Mangini`;
   });
 
