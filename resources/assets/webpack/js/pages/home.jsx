@@ -46,9 +46,7 @@ const Home = () => {
   }, [goingUp]);
 
   useEffect(() => {
-    if (window.scrollY != 0) {
-      window.scrollTo(0, 0);
-    }
+   
     // Update the document title using the browser API
     document.title = `Psicólogo en Montevideo Javier Mangini`;
   });
