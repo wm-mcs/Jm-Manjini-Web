@@ -64,7 +64,7 @@ const BlogIndividual = () => {
 
           {!loading && blog != null && (
             <div>
-              <h2 className="  text-center mb-5 decoracionHeaders">
+              <h2 className="text-wrap  text-center mb-5 decoracionHeaders">
                 {` ${blog.name} `}
               </h2>
               <div className="p-2 mb-5 shadow-sm ">

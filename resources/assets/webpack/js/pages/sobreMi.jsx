@@ -19,7 +19,7 @@ const SobreMi = () => {
         <h1 className="text-center col-12 my-5">Javier Mangini</h1>
 
         <div className="row mx-0">
-          <div className="col-12">
+          <div className="col-12 px-2 px-4">
             <p className="mb-5">
               Si estás en esta página, seguramente sea por una de estas dos
               razones:

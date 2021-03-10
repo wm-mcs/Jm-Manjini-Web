@@ -8,7 +8,7 @@ import Foto from '../../img/Javier/javier-mangini-radio.jpg';
 const Baner = () => (
   <section className="w-100 py-5">
     <div className="container d-flex flex-column align-items-center">
-      <h1 className="mb-5 text-center decoracionHeaders">
+      <h1 className="mb-5 text-center decoracionHeaders text-wrap">
         Javier Mangini psicólogo en Montevideo
       </h1>
       <div className="col-12 row mx-0 align-items-center  ">
